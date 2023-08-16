@@ -49,6 +49,7 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
+
 	body.dark-mode {
 		#dark-mode-toggle {
 			.cs-sun {
@@ -59,7 +60,6 @@
 			.cs-moon {
 				transform: translate(-50%, -150%);
 				opacity: 0;
-				fill: #fff;
 			}
 		}
 	}
@@ -67,8 +67,8 @@
 	#dark-mode-toggle {
 		display: block;
 		position: absolute;
-		top: (10/16rem);
-		right: (70/16rem);
+		top: 50%;
+		right: (90/20rem);
 		width: (48/16rem);
 		height: (48/16rem);
 		background: transparent;
@@ -76,6 +76,7 @@
 		overflow: hidden;
 		padding: 0;
 		z-index: 1000;
+		transform: translateY(-50%);
 
 		img,
 		svg {
@@ -92,9 +93,8 @@
 		.cs-moon {
 			z-index: 2;
 			// Transition properties
-			transition: transform 0.3s, opacity 0.3s;
-
-			// fill: yellow; --> uncomment to change the color of the moon if needed
+			transition: transform .3s, opacity .3s;
+			fill: #fff;
 		}
 
 		.cs-sun {
@@ -102,7 +102,7 @@
 			// Transition property
 			transform: translate(-50%, 100%);
 			opacity: 0;
-			transition: transform 0.3s, opacity 0.3s;
+			transition: transform .3s, opacity .3s;
 		}
 	}
 }
