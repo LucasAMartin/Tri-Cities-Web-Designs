@@ -11,7 +11,7 @@
 		--primary: #7286D3;
 		--primaryLight: #E5E0FF;
 		--secondary: #8EA7E9;
-		--secondaryLight: #001f3f;
+		--secondaryLight: #FFF2F2;
 		--headerColor: #1a1a1a;
 		--bodyTextColor: #4e4b66;
 		--bodyTextColorWhite: #fafbfc;
@@ -119,13 +119,21 @@
 		src: local(""), url("/assets/fonts/Lato-Bold.ttf") format("truetype");
 		font-display: swap;
 	}
+	/* George-700 - latin */
+	@font-face {
+		font-family: "George";
+		font-style: normal;
+		font-weight: 700;
+		src: local(""), url("/assets/fonts/George-SemiBold.ttf") format("truetype");
+		font-display: swap;
+	}
 
 	body,
 	html {
 		margin: 0;
 		padding: 0;
 		font-size: 100%;
-		font-family: 'Roboto', Arial, sans-serif;
+		font-family: 'Lato', Arial, sans-serif;
 		color: var(--bodyTextColor);
 		overflow-x: hidden;
 	}
@@ -284,7 +292,7 @@ html {
 		padding: 0.75rem 1rem;
 		/* prevents padding from affecting height and width */
 		box-sizing: border-box;
-		background-color: #fff;
+		background-color: var(--primaryLight);
 		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 		position: fixed;
 		z-index: 10000;
@@ -573,7 +581,7 @@ html {
 		padding: 0rem 1rem 0rem clamp(14.6875rem, 23vw, 26.25rem);
 		/* prevents padding from affecting height and width */
 		box-sizing: border-box;
-		background-color: #fff;
+		background-color: var(--primaryLight);
 		box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 		display: flex;
 		justify-content: space-between;

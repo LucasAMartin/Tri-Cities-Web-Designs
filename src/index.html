@@ -1,349 +1,672 @@
 ---
-title: 'Pixel Perfect Websites'
-description: 'Meta description for the page'
-preloadImg: '/assets/images/landing.jpg'
-permalink: '/'
+title: "Pixel Perfect Websites"
+description: "Meta description for the page"
+preloadImg: "/assets/images/landing.jpg"
+permalink: "/"
 eleventyNavigation:
   key: Home
   order: 100
 ---
 
-{% extends "layouts/base.html" %}
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/css/local.css" />
+<link rel="stylesheet" href="/css/critical.css" />
 
-{% block head %}
-    <link rel="stylesheet" href="/css/local.css" />
-    <link rel="stylesheet" href="/css/critical.css" />
+<!-- Script for Netlify Identity -->
+<script
+  defer
+  src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+></script>
+<script defer>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+{% endblock %} {% block body %}
 
-    <!-- Script for Netlify Identity -->
-    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <script defer>
-        if (window.netlifyIdentity) {
-            window
-                .netlifyIdentity
-                .on('init', (user) => {
-                    if (!user) {
-                        window
-                            .netlifyIdentity
-                            .on('login', () => {
-                                document.location.href = '/admin/';
-                            });
-                    }
-                });
+<!-- ============================================ -->
+<!--                   Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-929">
+  <svg
+    preserveAspectRatio="none"
+    width="100%"
+    height="100%"
+    id="svg"
+    viewBox="0 0 1440 490"
+    xmlns="http://www.w3.org/2000/svg"
+    class="cs-wave transition duration-300 ease-in-out delay-150"
+  >
+    <style>
+      .path-0 {
+        animation: pathAnim-0 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes pathAnim-0 {
+        0% {
+          d: path(
+            "M 0,500 C 0,500 0,125 0,125 C 65.42730299667038,102.18505364409916 130.85460599334075,79.3701072881983 188,80 C 245.14539400665925,80.6298927118017 294.0088790233074,104.70462449130596 336,101 C 377.9911209766926,97.29537550869404 413.1098779134296,65.81139474657789 472,79 C 530.8901220865704,92.18860525342211 613.5516093229744,150.04979652238254 665,162 C 716.4483906770256,173.95020347761746 736.6836847946727,139.989419163892 784,140 C 831.3163152053273,140.010580836108 905.713651498335,173.99252682204957 964,169 C 1022.286348501665,164.00747317795043 1064.4617092119868,120.04047354790976 1108,114 C 1151.5382907880132,107.95952645209024 1196.4395116537182,139.8455789863115 1252,148 C 1307.5604883462818,156.1544210136885 1373.780244173141,140.57721050684427 1440,125 C 1440,125 1440,500 1440,500 Z"
+          );
         }
-    </script>
-{% endblock %}
+        25% {
+          d: path(
+            "M 0,500 C 0,500 0,125 0,125 C 61.48644715747935,116.82695770131951 122.9728943149587,108.65391540263904 179,114 C 235.0271056850413,119.34608459736096 285.59486989764457,138.21129609076337 335,149 C 384.40513010235543,159.78870390923663 432.6476260944629,162.50090023430758 479,155 C 525.3523739055371,147.49909976569242 569.8146257245037,129.7851029720064 626,116 C 682.1853742754963,102.2148970279936 750.0938710075226,92.35868787766678 809,95 C 867.9061289924774,97.64131212233322 917.8098902454062,112.78014551732642 973,124 C 1028.1901097545938,135.21985448267358 1088.6665680108522,142.52073005302753 1132,137 C 1175.3334319891478,131.47926994697247 1201.5238377111853,113.13693427056356 1250,109 C 1298.4761622888147,104.86306572943644 1369.2380811444073,114.93153286471822 1440,125 C 1440,125 1440,500 1440,500 Z"
+          );
+        }
+        50% {
+          d: path(
+            "M 0,500 C 0,500 0,125 0,125 C 59.30112220989024,137.58675545689974 118.60224441978048,150.17351091379948 162,144 C 205.39775558021952,137.82648908620052 232.8921445307683,112.89271180170184 291,95 C 349.1078554692317,77.10728819829816 437.82917745714633,66.25564187939325 508,80 C 578.1708225428537,93.74435812060675 629.7911456406463,132.08472068072513 669,150 C 708.2088543593537,167.91527931927487 735.0062399802687,165.40547539770625 785,152 C 834.9937600197313,138.59452460229375 908.1838944382787,114.29337772844987 974,111 C 1039.8161055617213,107.70662227155013 1098.2581822666173,125.42101368849427 1139,134 C 1179.7418177333827,142.57898631150573 1202.7833764952522,142.02256751757307 1250,139 C 1297.2166235047478,135.97743248242693 1368.608311752374,130.48871624121347 1440,125 C 1440,125 1440,500 1440,500 Z"
+          );
+        }
+        75% {
+          d: path(
+            "M 0,500 C 0,500 0,125 0,125 C 50.7114070785547,101.4333949932174 101.4228141571094,77.86678998643482 148,92 C 194.5771858428906,106.13321001356518 237.02015045011706,157.9662350474781 295,163 C 352.97984954988294,168.0337649525219 426.4965840424221,126.26826982365273 488,104 C 549.5034159575779,81.73173017634727 598.9935133801948,78.96068565791097 642,82 C 685.0064866198052,85.03931434208903 721.5293624367987,93.88898754470341 771,95 C 820.4706375632013,96.11101245529659 882.8890368726107,89.48336416327538 940,109 C 997.1109631273893,128.51663583672462 1048.9144900727588,174.17755580219512 1106,169 C 1163.0855099272412,163.82244419780488 1225.4530028363545,107.80641262794425 1282,92 C 1338.5469971636455,76.19358737205575 1389.2734985818229,100.59679368602787 1440,125 C 1440,125 1440,500 1440,500 Z"
+          );
+        }
+        100% {
+          d: path(
+            "M 0,500 C 0,500 0,125 0,125 C 65.42730299667038,102.18505364409916 130.85460599334075,79.3701072881983 188,80 C 245.14539400665925,80.6298927118017 294.0088790233074,104.70462449130596 336,101 C 377.9911209766926,97.29537550869404 413.1098779134296,65.81139474657789 472,79 C 530.8901220865704,92.18860525342211 613.5516093229744,150.04979652238254 665,162 C 716.4483906770256,173.95020347761746 736.6836847946727,139.989419163892 784,140 C 831.3163152053273,140.010580836108 905.713651498335,173.99252682204957 964,169 C 1022.286348501665,164.00747317795043 1064.4617092119868,120.04047354790976 1108,114 C 1151.5382907880132,107.95952645209024 1196.4395116537182,139.8455789863115 1252,148 C 1307.5604883462818,156.1544210136885 1373.780244173141,140.57721050684427 1440,125 C 1440,125 1440,500 1440,500 Z"
+          );
+        }
+      }
+    </style>
+    <defs>
+      <linearGradient id="gradient" x1="79%" y1="10%" x2="21%" y2="90%">
+        <stop offset="5%" stop-color="#7286d3"></stop>
+        <stop offset="95%" stop-color="#f78da7"></stop>
+      </linearGradient>
+    </defs>
+    <path
+      d="M 0,500 C 0,500 0,125 0,125 C 65.42730299667038,102.18505364409916 130.85460599334075,79.3701072881983 188,80 C 245.14539400665925,80.6298927118017 294.0088790233074,104.70462449130596 336,101 C 377.9911209766926,97.29537550869404 413.1098779134296,65.81139474657789 472,79 C 530.8901220865704,92.18860525342211 613.5516093229744,150.04979652238254 665,162 C 716.4483906770256,173.95020347761746 736.6836847946727,139.989419163892 784,140 C 831.3163152053273,140.010580836108 905.713651498335,173.99252682204957 964,169 C 1022.286348501665,164.00747317795043 1064.4617092119868,120.04047354790976 1108,114 C 1151.5382907880132,107.95952645209024 1196.4395116537182,139.8455789863115 1252,148 C 1307.5604883462818,156.1544210136885 1373.780244173141,140.57721050684427 1440,125 C 1440,125 1440,500 1440,500 Z"
+      stroke="none"
+      stroke-width="0"
+      fill="url(#gradient)"
+      fill-opacity="0.4"
+      class="transition-all duration-300 ease-in-out delay-150 path-0"
+      transform="rotate(-180 720 250)"
+    ></path>
+    <style>
+      .path-1 {
+        animation: pathAnim-1 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes pathAnim-1 {
+        0% {
+          d: path(
+            "M 0,500 C 0,500 0,250 0,250 C 63.158515229991366,239.90731286225184 126.31703045998273,229.81462572450366 174,238 C 221.68296954001727,246.18537427549634 253.89039339006047,272.6488099642373 311,265 C 368.10960660993953,257.3511900357627 450.12139597977557,215.59013441854734 505,217 C 559.8786040202244,218.40986558145266 587.6240226908374,262.9906523615735 638,282 C 688.3759773091626,301.0093476384265 761.3825132568751,294.4472561351585 814,290 C 866.6174867431249,285.5527438648415 898.8459242816625,283.22032309779263 953,280 C 1007.1540757183375,276.77967690220737 1083.2337896164754,272.67145147367125 1136,264 C 1188.7662103835246,255.32854852632875 1218.2189172524356,242.09387100752247 1265,239 C 1311.7810827475644,235.90612899247753 1375.890541373782,242.95306449623877 1440,250 C 1440,250 1440,500 1440,500 Z"
+          );
+        }
+        25% {
+          d: path(
+            "M 0,500 C 0,500 0,250 0,250 C 50.3537304229868,236.05169564681216 100.7074608459736,222.10339129362436 159,231 C 217.2925391540264,239.89660870637564 283.5238870390924,271.6381304723147 335,291 C 386.4761129609076,310.3618695276853 423.19699099765694,317.34408681711676 476,295 C 528.8030090023431,272.65591318288324 597.6881489702799,220.98552225921813 649,216 C 700.3118510297201,211.01447774078187 734.0504131212233,252.7138241460106 783,270 C 831.9495868787767,287.2861758539894 896.1101985448267,280.15918115673946 963,263 C 1029.8898014551733,245.84081884326056 1099.5087926994697,218.64945122703168 1148,224 C 1196.4912073005303,229.35054877296832 1223.8546306572944,267.2430139351338 1269,277 C 1314.1453693427056,286.7569860648662 1377.0726846713528,268.3784930324331 1440,250 C 1440,250 1440,500 1440,500 Z"
+          );
+        }
+        50% {
+          d: path(
+            "M 0,500 C 0,500 0,250 0,250 C 63.04668886422493,247.38769268713776 126.09337772844987,244.7753853742755 184,247 C 241.90662227155013,249.2246146257245 294.67317795042544,256.2861511900358 346,273 C 397.32682204957456,289.7138488099642 447.2139104698482,316.0800098655814 503,294 C 558.7860895301518,271.9199901344186 620.4711801701814,201.39380934763847 662,203 C 703.5288198298186,204.60619065236153 724.9013688494266,278.34475274386483 777,291 C 829.0986311505734,303.65524725613517 911.9233444321123,255.2271796769022 972,245 C 1032.0766555678877,234.7728203230978 1069.4052534221235,262.7465285485263 1114,268 C 1158.5947465778765,273.2534714514737 1210.4556418793932,255.78670612899248 1266,249 C 1321.5443581206068,242.21329387100752 1380.7721790603034,246.10664693550376 1440,250 C 1440,250 1440,500 1440,500 Z"
+          );
+        }
+        75% {
+          d: path(
+            "M 0,500 C 0,500 0,250 0,250 C 61.08541127142679,251.109779257615 122.17082254285359,252.21955851523003 168,251 C 213.82917745714641,249.78044148476997 244.40212110001238,246.23154519669498 290,257 C 335.5978788999876,267.768454803305 396.2206930570969,292.8542606979899 459,291 C 521.7793069429031,289.1457393020101 586.7151066715995,260.3514120113455 647,244 C 707.2848933284005,227.64858798865455 762.9188802565051,223.74009125662843 808,215 C 853.0811197434949,206.25990874337157 887.6093723023799,192.68822296214083 943,215 C 998.3906276976201,237.31177703785917 1074.6436305339746,295.50701689480826 1134,292 C 1193.3563694660254,288.49298310519174 1235.8161055617213,223.2837094586262 1284,206 C 1332.1838944382787,188.7162905413738 1386.0919472191395,219.35814527068692 1440,250 C 1440,250 1440,500 1440,500 Z"
+          );
+        }
+        100% {
+          d: path(
+            "M 0,500 C 0,500 0,250 0,250 C 63.158515229991366,239.90731286225184 126.31703045998273,229.81462572450366 174,238 C 221.68296954001727,246.18537427549634 253.89039339006047,272.6488099642373 311,265 C 368.10960660993953,257.3511900357627 450.12139597977557,215.59013441854734 505,217 C 559.8786040202244,218.40986558145266 587.6240226908374,262.9906523615735 638,282 C 688.3759773091626,301.0093476384265 761.3825132568751,294.4472561351585 814,290 C 866.6174867431249,285.5527438648415 898.8459242816625,283.22032309779263 953,280 C 1007.1540757183375,276.77967690220737 1083.2337896164754,272.67145147367125 1136,264 C 1188.7662103835246,255.32854852632875 1218.2189172524356,242.09387100752247 1265,239 C 1311.7810827475644,235.90612899247753 1375.890541373782,242.95306449623877 1440,250 C 1440,250 1440,500 1440,500 Z"
+          );
+        }
+      }
+    </style>
+    <defs>
+      <linearGradient id="gradient" x1="79%" y1="10%" x2="21%" y2="90%">
+        <stop offset="5%" stop-color="#7286d3"></stop>
+        <stop offset="95%" stop-color="#f78da7"></stop>
+      </linearGradient>
+    </defs>
+    <path
+      d="M 0,500 C 0,500 0,250 0,250 C 63.158515229991366,239.90731286225184 126.31703045998273,229.81462572450366 174,238 C 221.68296954001727,246.18537427549634 253.89039339006047,272.6488099642373 311,265 C 368.10960660993953,257.3511900357627 450.12139597977557,215.59013441854734 505,217 C 559.8786040202244,218.40986558145266 587.6240226908374,262.9906523615735 638,282 C 688.3759773091626,301.0093476384265 761.3825132568751,294.4472561351585 814,290 C 866.6174867431249,285.5527438648415 898.8459242816625,283.22032309779263 953,280 C 1007.1540757183375,276.77967690220737 1083.2337896164754,272.67145147367125 1136,264 C 1188.7662103835246,255.32854852632875 1218.2189172524356,242.09387100752247 1265,239 C 1311.7810827475644,235.90612899247753 1375.890541373782,242.95306449623877 1440,250 C 1440,250 1440,500 1440,500 Z"
+      stroke="none"
+      stroke-width="0"
+      fill="url(#gradient)"
+      fill-opacity="0.53"
+      class="transition-all duration-300 ease-in-out delay-150 path-1"
+      transform="rotate(-180 720 250)"
+    ></path>
+    <style>
+      .path-2 {
+        animation: pathAnim-2 30s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+      }
+      @keyframes pathAnim-2 {
+        0% {
+          d: path(
+            "M 0,500 C 0,500 0,375 0,375 C 40.67085953878406,373.5301270193612 81.34171907756811,372.06025403872235 131,364 C 180.65828092243189,355.93974596127765 239.30398322851158,341.2891108644716 308,352 C 376.6960167714884,362.7108891355284 455.4423480083857,398.7833025033913 506,409 C 556.5576519916143,419.2166974966087 578.9266247379455,403.5776791219633 622,403 C 665.0733752620545,402.4223208780367 728.8511530398324,416.9059810087557 789,420 C 849.1488469601676,423.0940189912443 905.6687631027254,414.79839684301396 954,404 C 1002.3312368972746,393.20160315698604 1042.4737945492661,379.90043161918857 1097,364 C 1151.5262054507339,348.09956838081143 1220.4360587002097,329.5998766802319 1280,331 C 1339.5639412997903,332.4001233197681 1389.7819706498951,353.70006165988406 1440,375 C 1440,375 1440,500 1440,500 Z"
+          );
+        }
+        25% {
+          d: path(
+            "M 0,500 C 0,500 0,375 0,375 C 41.106424959921085,380.29717597730917 82.21284991984217,385.5943519546184 133,398 C 183.78715008015783,410.4056480453816 244.2550252805525,429.91976815883584 301,419 C 357.7449747194475,408.08023184116416 410.76704895794796,366.72657541003827 469,350 C 527.232951042052,333.27342458996173 590.6767788876557,341.1739302010112 648,345 C 705.3232211123443,348.8260697989888 756.5258354914293,348.5777037859169 801,353 C 845.4741645085707,357.4222962140831 883.2198791466272,366.51525465532126 934,378 C 984.7801208533728,389.48474534467874 1048.594647922062,403.3612775927981 1110,403 C 1171.405352077938,402.6387224072019 1230.401529165125,388.0396349734863 1285,381 C 1339.598470834875,373.9603650265137 1389.7992354174376,374.48018251325686 1440,375 C 1440,375 1440,500 1440,500 Z"
+          );
+        }
+        50% {
+          d: path(
+            "M 0,500 C 0,500 0,375 0,375 C 62.834085583919105,367.9201134541867 125.66817116783821,360.84022690837344 181,377 C 236.3318288321618,393.15977309162656 284.16140091256625,432.5592058206931 339,419 C 393.83859908743375,405.4407941793069 455.6862251818967,338.9229498088543 506,330 C 556.3137748181033,321.0770501911457 595.093698359847,369.74899494388956 638,388 C 680.906301640153,406.25100505611044 727.9389813787151,394.0810704155876 777,392 C 826.0610186212849,389.9189295844124 877.150376125293,397.92672339376 936,390 C 994.849623874707,382.07327660624 1061.4595141201135,358.21203600937235 1120,354 C 1178.5404858798865,349.78796399062765 1229.0115673942532,365.2251325687507 1281,372 C 1332.9884326057468,378.7748674312493 1386.4942163028734,376.88743371562464 1440,375 C 1440,375 1440,500 1440,500 Z"
+          );
+        }
+        75% {
+          d: path(
+            "M 0,500 C 0,500 0,375 0,375 C 53.40066592674806,398.11278825995805 106.80133185349612,421.2255765199161 164,420 C 221.19866814650388,418.7744234800839 282.1953385127636,393.2104821802935 339,389 C 395.8046614872364,384.7895178197065 448.41731409544946,401.93249475890985 498,403 C 547.5826859045505,404.06750524109015 594.1354051054384,389.0595387840671 650,374 C 705.8645948945616,358.9404612159329 771.0410654827971,343.82935010482174 821,352 C 870.9589345172029,360.17064989517826 905.700332963374,391.62306079664575 947,406 C 988.299667036626,420.37693920335425 1036.1576026637072,417.67840670859533 1097,407 C 1157.8423973362928,396.32159329140467 1231.669256381798,377.66331236897275 1291,371 C 1350.330743618202,364.33668763102725 1395.165371809101,369.6683438155136 1440,375 C 1440,375 1440,500 1440,500 Z"
+          );
+        }
+        100% {
+          d: path(
+            "M 0,500 C 0,500 0,375 0,375 C 40.67085953878406,373.5301270193612 81.34171907756811,372.06025403872235 131,364 C 180.65828092243189,355.93974596127765 239.30398322851158,341.2891108644716 308,352 C 376.6960167714884,362.7108891355284 455.4423480083857,398.7833025033913 506,409 C 556.5576519916143,419.2166974966087 578.9266247379455,403.5776791219633 622,403 C 665.0733752620545,402.4223208780367 728.8511530398324,416.9059810087557 789,420 C 849.1488469601676,423.0940189912443 905.6687631027254,414.79839684301396 954,404 C 1002.3312368972746,393.20160315698604 1042.4737945492661,379.90043161918857 1097,364 C 1151.5262054507339,348.09956838081143 1220.4360587002097,329.5998766802319 1280,331 C 1339.5639412997903,332.4001233197681 1389.7819706498951,353.70006165988406 1440,375 C 1440,375 1440,500 1440,500 Z"
+          );
+        }
+      }
+    </style>
+    <defs>
+      <linearGradient id="gradient" x1="79%" y1="10%" x2="21%" y2="90%">
+        <stop offset="5%" stop-color="#7286d3"></stop>
+        <stop offset="95%" stop-color="#f78da7"></stop>
+      </linearGradient>
+    </defs>
+    <path
+      d="M 0,500 C 0,500 0,375 0,375 C 40.67085953878406,373.5301270193612 81.34171907756811,372.06025403872235 131,364 C 180.65828092243189,355.93974596127765 239.30398322851158,341.2891108644716 308,352 C 376.6960167714884,362.7108891355284 455.4423480083857,398.7833025033913 506,409 C 556.5576519916143,419.2166974966087 578.9266247379455,403.5776791219633 622,403 C 665.0733752620545,402.4223208780367 728.8511530398324,416.9059810087557 789,420 C 849.1488469601676,423.0940189912443 905.6687631027254,414.79839684301396 954,404 C 1002.3312368972746,393.20160315698604 1042.4737945492661,379.90043161918857 1097,364 C 1151.5262054507339,348.09956838081143 1220.4360587002097,329.5998766802319 1280,331 C 1339.5639412997903,332.4001233197681 1389.7819706498951,353.70006165988406 1440,375 C 1440,375 1440,500 1440,500 Z"
+      stroke="none"
+      stroke-width="0"
+      fill="url(#gradient)"
+      fill-opacity="1"
+      class="transition-all duration-300 ease-in-out delay-150 path-2"
+      transform="rotate(-180 720 250)"
+    ></path>
+  </svg>
+  <div class="cs-container">
+    <div class="cs-content">
+      <h2 class="cs-title">
+        Website Design and Development for Small Businesses
+      </h2>
+      <div class="cs-content-group">
+        <p class="cs-text">
+          100% Hand Coded websites to grow your business. No Page builders, no
+          frameworks, clean & modern designs. Starting at $150/mo.
+        </p>
+        <a href="" class="cs-button-solid">Contact Me!</a>
+      </div>
+      <picture class="cs-picture">
+        <!--Mobile Image-->
+        <source
+          media="(max-width: 600px)"
+          srcset="/assets/images/brmockup.png"
+        />
+        <!--Tablet and above Image-->
+        <source
+          media="(min-width: 601px)"
+          srcset="/assets/images/brmockup.png"
+        />
+        <img
+          loading="lazy"
+          decoding="async"
+          src="/assets/images/brmockup.png"
+          alt="hair model"
+          width="576"
+          height="598"
+        />
+      </picture>
+    </div>
+  </div>
+</section>
 
-{% block body %}
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
 
-    <!-- ============================================ -->
-    <!--                    Hero                      -->
-    <!-- ============================================ -->
+<section id="sbs">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <div class="cs-left">
+      <picture class="cs-picture cs-picture1">
+        <source
+          media="(max-width: 600px)"
+          srcset="/assets/images/cabinets2-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="/assets/images/cabinets2.jpg"
+        />
+        <img
+          aria-hidden="true"
+          decoding="async"
+          src="/assets/images/cabinets2.jpg"
+          alt="cabinets"
+          loading="lazy"
+          width="400"
+          height="563"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture2">
+        <source
+          media="(max-width: 600px)"
+          srcset="/assets/images/construction-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="/assets/images/construction.jpg"
+        />
+        <img
+          aria-hidden="true"
+          decoding="async"
+          src="/assets/images/construction.jpg"
+          alt="house"
+          loading="lazy"
+          width="400"
+          height="563"
+        />
+      </picture>
+    </div>
+    <!-- Right Content Section-->
+    <div class="cs-right">
+      <span class="cs-topper">About Us</span>
+      <h2 class="cs-title">About Company Title</h2>
+      <p class="cs-text">
+        In consequat tincidunt turpis sit amet imperdiet. Praesent Class
+        officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
+        et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
+        nonatourean olei aptent taciti sociosqu ad litora torquent per.
+      </p>
+      <p class="cs-text">
+        In consequat tincidunt turpis sit amet imperdiet. Praesent Class
+        officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
+        et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
+        nonatourean olei aptent taciti sociosqu ad litora torquent per.
+      </p>
+      <div class="cs-flex-group">
+        <p class="cs-flex-p">
+          In consequat tincidunt turpis sit amet imperdiet. Praesent Classei
+          consequat tincidunt turpis sit amet imperdiet for mind.
+        </p>
+        <span class="cs-name">Justin Time</span>
+        <span class="cs-job">CEO-Founder</span>
+        <img
+          class="cs-quote-icon"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
+          alt="gavel"
+          width="136"
+          height="77"
+        />
+      </div>
+      <a href="/about" class="cs-button-solid">More About Us</a>
+    </div>
+  </div>
+</section>
 
-    <section id="hero">
-        <div class="cs-container">
-            <div class="cs-flex-group">
-                <span class="cs-topper">mountain hiking society</span>
-                <h1 class="cs-title">Explore the World with Exciting People</h1>
-                <p class="cs-text">
-                    Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin nibh condimentum.
-                </p>
-                <a href="/about" class="cs-button-solid">Explore More</a>
-                <a href="/contact" class="cs-button-transparent">
-                    <img
-                    class="cs-img"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg"
-                    alt="play icon"
-                    width="17"
-                    height="17" />
-                    Get in Touch
-                </a>
-            </div>
-        </div>
+<!-- ============================================ -->
+<!--            Extra Content To Rank             -->
+<!-- ============================================ -->
 
-        <!-- Background Image -->
-        <picture class="cs-picture">
-            <source media="(max-width: 600px)" srcset="/assets/images/landing-m.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/landing.jpg">
-            <img aria-hidden="true" decoding="async" src="/assets/images/landing.jpg" alt="new home" width="2500" height="1667" loading="eager">
+<section id="sbs-r">
+  <div class="cs-container">
+    <!-- Left Image Section -->
+    <div class="cs-left">
+      <picture class="cs-picture cs-picture1">
+        <source
+          media="(max-width: 600px)"
+          srcset="/assets/images/construction-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="/assets/images/construction.jpg"
+        />
+        <img
+          aria-hidden="true"
+          decoding="async"
+          src="/assets/images/construction.jpg"
+          alt="house"
+          loading="lazy"
+          width="400"
+          height="560"
+        />
+      </picture>
+      <picture class="cs-picture cs-picture2">
+        <source
+          media="(max-width: 600px)"
+          srcset="/assets/images/cabinets2-m.jpg"
+        />
+        <source
+          media="(min-width: 601px)"
+          srcset="/assets/images/cabinets2.jpg"
+        />
+        <img
+          aria-hidden="true"
+          decoding="async"
+          src="/assets/images/cabinets2.jpg"
+          alt="cabinets"
+          loading="lazy"
+          width="400"
+          height="560"
+        />
+      </picture>
+    </div>
+    <!-- Right Content Section-->
+    <div class="cs-right">
+      <span class="cs-topper">SEO Ranking</span>
+      <h2 class="cs-title">Talk about a main service keyword</h2>
+      <p class="cs-text">
+        In consequat tincidunt turpis sit amet imperdiet. Praesent Class
+        officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur
+        et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent
+        nonatourean olei aptent taciti sociosqu ad litora torquent per.
+      </p>
+      <p class="cs-text">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non tenetur,
+        iure nihil ipsam qui atque commodi id voluptatem nesciunt, quis animi
+        fuga cum doloribus! Eaque laboriosam, unde consectetur iure asperiores
+        ullam. Consequuntur debitis a voluptatibus vitae optio autem explicabo
+        quia neque est quas, in placeat. Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Doloribus modi laudantium voluptatibus rem libero
+        error minus quia eligendi sapiente eos.
+      </p>
+      <a href="/blog" class="cs-button-solid">Read our Blog</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery">
+  <div class="cs-container">
+    <span class="cs-topper">Our Portfolio</span>
+    <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
+    <div class="cs-image-group">
+      <!-- Row 1-->
+      <div class="cs-row cs-row-1">
+        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+        <picture class="cs-picture cs-picture1">
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/portfolio/port1-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/portfolio/port1.jpg"
+          />
+          <img
+            aria-hidden="true"
+            decoding="async"
+            src="/assets/images/portfolio/port1.jpg"
+            alt="new hallway"
+            loading="lazy"
+            width="400"
+            height="560"
+          />
         </picture>
-    </section>
+        <picture class="cs-picture cs-picture2">
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/portfolio/port4-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/portfolio/port4.jpg"
+          />
+          <img
+            aria-hidden="true"
+            decoding="async"
+            src="/assets/images/portfolio/port4.jpg"
+            alt="new home construction"
+            loading="lazy"
+            width="400"
+            height="560"
+          />
+        </picture>
+        <picture class="cs-picture cs-picture3">
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/portfolio/port7-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/portfolio/port7.jpg"
+          />
+          <img
+            aria-hidden="true"
+            decoding="async"
+            src="/assets/images/portfolio/port7.jpg"
+            alt="building a new wall"
+            loading="lazy"
+            width="400"
+            height="560"
+          />
+        </picture>
+      </div>
+      <!-- Row 2 -->
+      <div class="cs-row cs-row-2">
+        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+        <picture class="cs-picture cs-picture1">
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/portfolio/port2-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/portfolio/port2.jpg"
+          />
+          <img
+            aria-hidden="true"
+            decoding="async"
+            src="/assets/images/portfolio/port2.jpg"
+            alt="new kitchen"
+            loading="lazy"
+            width="400"
+            height="560"
+          />
+        </picture>
+        <picture class="cs-picture cs-picture2">
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/portfolio/port5-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/portfolio/port5.jpg"
+          />
+          <img
+            aria-hidden="true"
+            decoding="async"
+            src="/assets/images/portfolio/port5.jpg"
+            alt="apartment addition"
+            loading="lazy"
+            width="400"
+            height="560"
+          />
+        </picture>
+        <picture class="cs-picture cs-picture3">
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/portfolio/port8-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/portfolio/port8.jpg"
+          />
+          <img
+            aria-hidden="true"
+            decoding="async"
+            src="/assets/images/portfolio/port8.jpg"
+            alt="kew kitchen cabinets"
+            loading="lazy"
+            width="400"
+            height="560"
+          />
+        </picture>
+      </div>
+      <!-- Row 3 -->
+      <div class="cs-row cs-row-3">
+        <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
+        <picture class="cs-picture cs-picture1">
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/portfolio/port3-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/portfolio/port3.jpg"
+          />
+          <img
+            aria-hidden="true"
+            decoding="async"
+            src="/assets/images/portfolio/port3.jpg"
+            alt="new kitchen"
+            loading="lazy"
+            width="400"
+            height="560"
+          />
+        </picture>
+        <picture class="cs-picture cs-picture2">
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/portfolio/port6-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/portfolio/port6.jpg"
+          />
+          <img
+            aria-hidden="true"
+            decoding="async"
+            src="/assets/images/portfolio/port6.jpg"
+            alt="apartment addition"
+            loading="lazy"
+            width="400"
+            height="560"
+          />
+        </picture>
+        <picture class="cs-picture cs-picture3">
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/portfolio/port9-m.jpg"
+          />
+          <source
+            media="(min-width: 601px)"
+            srcset="/assets/images/portfolio/port9.jpg"
+          />
+          <img
+            aria-hidden="true"
+            decoding="async"
+            src="/assets/images/portfolio/port9.jpg"
+            alt="kew kitchen cabinets"
+            loading="lazy"
+            width="400"
+            height="560"
+          />
+        </picture>
+      </div>
+    </div>
+    <a href="/projects" class="cs-button-solid">View Full Gallery</a>
+  </div>
+</section>
 
-    <!-- ============================================ -->
-    <!--                  Services                    -->
-    <!-- ============================================ -->
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
 
-    <section id="services" class="services">
-        <!-- Get Icons From flaticon.com -->
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service1.svg"
-                alt="appliance"
-                width="48"
-                height="48" />
-            </picture>
-            <h2>Service 1</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service2.svg"
-                alt="appliance"
-                width="48"
-                height="48" />
-            </picture>
-            <h2>Service 2</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-        <div class="card">
-            <picture>
-                <img
-                aria-hidden="true"
-                decoding="async"
-                src="/assets/svgs/service3.svg"
-                alt="appliance"
-                width="48"
-                height="48" />
-            </picture>
-            <h2>Service 3</h2>
-            <p>Talk about the service with keywords people will be searching for it by. Keep it 1-2 sentences.</p>
-        </div>
-    </section>
+<section id="reviews">
+  <div class="cs-container">
+    <span class="cs-topper">Our Reviews</span>
+    <h2 class="cs-title">Words From Our Customers</h2>
+    <p class="cs-text">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor
+      volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida
+      viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo,
+      ornare. Lorem ipsum dolor sit amet.
+    </p>
+    <ul class="cs-card-group">
+      <!-- Review 1 -->
+      <li class="cs-item">
+        <img
+          class="cs-item-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
+          alt="profile picture"
+          width="80"
+          height="80"
+        />
+        <p class="cs-item-p">
+          Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor
+          habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed
+          ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat
+          viverra massa urna, volutpat orci imperdiet eget eget.
+        </p>
+        <span class="cs-reviewer">
+          Jon Doe
+          <span class="cs-desc">Homeowner</span>
+        </span>
+        <img
+          class="cs-item-stars"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
+          alt="stars"
+          width="96"
+          height="16"
+        />
+      </li>
+      <!-- Review 2 -->
+      <li class="cs-item">
+        <img
+          class="cs-item-img"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
+          alt="profile picture"
+          width="80"
+          height="80"
+        />
+        <p class="cs-item-p">
+          Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor
+          habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed
+          ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat
+          viverra massa urna, volutpat orci imperdiet eget eget.
+        </p>
+        <span class="cs-reviewer">
+          Jane Doe
+          <span class="cs-desc">Homeowner</span>
+        </span>
+        <img
+          class="cs-item-stars"
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
+          alt="stars"
+          width="96"
+          height="16"
+        />
+      </li>
+    </ul>
+    <a aria-label="read more reviews" href="/reviews" class="cs-button-solid"
+      >Our Reviews</a
+    >
+  </div>
+</section>
 
-    <!-- ============================================ -->
-    <!--                 Side By Side                 -->
-    <!-- ============================================ -->
-
-    <section id="sbs">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="563">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="563">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">About Us</span>
-                <h2 class="cs-title">About Company Title</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <div class="cs-flex-group">
-                    <p class="cs-flex-p">
-                        In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                    </p>
-                    <span class="cs-name">Justin Time</span>
-                    <span class="cs-job">CEO-Founder</span>
-                    <img 
-                    class="cs-quote-icon"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg"
-                    alt="gavel"
-                    width="136"
-                    height="77" />
-                </div>
-                <a href="/about" class="cs-button-solid">More About Us</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--            Extra Content To Rank             -->
-    <!-- ============================================ -->
-
-    <section id="sbs-r">
-        <div class="cs-container">
-            <!-- Left Image Section -->
-            <div class="cs-left">
-                <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/construction-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/construction.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/construction.jpg" alt="house" loading="lazy" width="400" height="560">
-                </picture>
-                <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cabinets2-m.jpg">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cabinets2.jpg">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cabinets2.jpg" alt="cabinets" loading="lazy" width="400" height="560">
-                </picture>
-            </div>
-            <!-- Right Content Section-->
-            <div class="cs-right">
-                <span class="cs-topper">SEO Ranking</span>
-                <h2 class="cs-title">Talk about a main service keyword</h2>
-                <p class="cs-text">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
-                </p>
-                <p class="cs-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non tenetur, iure nihil ipsam qui atque commodi id voluptatem nesciunt, quis animi fuga cum doloribus! Eaque laboriosam, unde consectetur iure asperiores ullam. Consequuntur debitis a voluptatibus vitae optio autem explicabo quia neque est quas, in placeat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus modi laudantium voluptatibus rem libero error minus quia eligendi sapiente eos.
-                </p>
-                <a href="/blog" class="cs-button-solid">Read our Blog</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Gallery                    -->
-    <!-- ============================================ -->
-
-    <section id="gallery">
-        <div class="cs-container">
-            <span class="cs-topper">Our Portfolio</span>
-            <h2 class="cs-title">Et orci volutpat, back up generator installations</h2>
-            <div class="cs-image-group">
-                <!-- Row 1-->
-                <div class="cs-row cs-row-1">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port1-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port1.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port1.jpg" alt="new hallway" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port4-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port4.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port4.jpg" alt="new home construction" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port7-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port7.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port7.jpg" alt="building a new wall" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 2 -->
-                <div class="cs-row cs-row-2">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port2-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port2.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port2.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port5-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port5.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port5.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port8-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port8.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port8.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-                </div>
-                <!-- Row 3 -->
-                <div class="cs-row cs-row-3">
-                    <!-- To add more images, copy and paste this row's picture tags here in order from cs-picture-1 to cs-picture-3 and they will maintain the same layout-->
-                    <picture class="cs-picture cs-picture1">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port3-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port3.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port3.jpg" alt="new kitchen" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture2">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port6-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port6.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port6.jpg" alt="apartment addition" loading="lazy" width="400" height="560">
-                    </picture>
-                    <picture class="cs-picture cs-picture3">
-                        <source media="(max-width: 600px)" srcset="/assets/images/portfolio/port9-m.jpg">
-                        <source media="(min-width: 601px)" srcset="/assets/images/portfolio/port9.jpg">
-                        <img aria-hidden="true" decoding="async" src="/assets/images/portfolio/port9.jpg" alt="kew kitchen cabinets" loading="lazy" width="400" height="560">
-                    </picture>
-
-                </div>
-            </div>
-            <a href="/projects" class="cs-button-solid">View Full Gallery</a>
-        </div>
-    </section>
-
-    <!-- ============================================ -->
-    <!--                   Reviews                    -->
-    <!-- ============================================ -->
-
-    <section id="reviews">
-        <div class="cs-container">
-            <span class="cs-topper">Our Reviews</span>
-            <h2 class="cs-title">Words From Our Customers</h2>
-            <p class="cs-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit dolor volutpat porttitor sagittis nunc nisl. Sagittis sit pellentesque gravida viverra. Leo ut sed euismod tortor risus et. Ornare non neque, leo, ornare. Lorem ipsum dolor sit amet.
-            </p>
-            <ul class="cs-card-group">
-                <!-- Review 1 -->
-                <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile5.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80" />
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jon Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16" />
-                </li>
-                <!-- Review 2 -->
-                <li class="cs-item">
-                    <img
-                    class="cs-item-img"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/profile-4.png"
-                    alt="profile picture"
-                    width="80"
-                    height="80" />
-                    <p class="cs-item-p">
-                        Dictum dolor, nullam morbi sem in auctor proin. Consequat dolor habitasse nam sed tempor. Viverra magna pharetra rhoncus, nec sed ullamcorper lectus et. Auctor velit diam fermentum consequat. Feugiat viverra massa urna, volutpat orci imperdiet eget eget.
-                    </p>
-                    <span class="cs-reviewer">
-                        Jane Doe
-                        <span class="cs-desc">Homeowner</span>
-                    </span>
-                    <img
-                    class="cs-item-stars"
-                    aria-hidden="true"
-                    loading="lazy"
-                    decoding="async"
-                    src="https://csimg.nyc3.digitaloceanspaces.com/Reviews/stars-yellow.svg"
-                    alt="stars"
-                    width="96"
-                    height="16" />
-                </li>
-            </ul>
-            <a aria-label="read more reviews" href="/reviews" class="cs-button-solid">Our Reviews</a>
-        </div>
-    </section>
-
-    {% include 'components/cta.html' %}
-{% endblock %}
+{% include 'components/cta.html' %} {% endblock %}
