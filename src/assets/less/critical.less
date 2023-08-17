@@ -21,9 +21,7 @@
 			overflow: hidden;
 			top: 0px;
 			transform: translateX(-20px) rotate(180deg);
-			transition-duration: 1500ms;
-			transition: ease-in-out;
-			transition-delay: 200;
+			transition: filter 0.3s;
 		}
 
 		.cs-container {
@@ -53,16 +51,16 @@
 			font-size: clamp(2.4375rem, 6.40vw, 3.8125rem);
 			;
 			font-weight: 900;
-			text-transform: uppercase;
 			line-height: 1.2em;
 			text-align: inherit;
 			max-width: (1096/16rem);
 			/* 8px - 16px */
 			margin: 0 0 clamp(.5rem, 2vw, 1rem) 0;
-			color: var(--bodyTextColor);
+			color: black;
 			position: relative;		
 			z-index: 2;
 			font-family: 'George', Arial, Helvetica, sans-serif;
+			text-transform: none;
 		}
 		.cs-content-group{
 			z-index: 2;
@@ -74,7 +72,13 @@
 			width: 100%;
 			max-width: (650/16rem);
 			margin: 0 auto (28/16rem) auto;
-			color: var(--bodyTextColor);
+			color: black;
+		}
+		.body.dark-mode {
+			.cs-text,
+			.cs-title {
+			color: white;
+			}
 		}
 		.cs-picture {
 			width: 100%;
@@ -90,5 +94,26 @@
 			}
 		}
 	}
-
 }
+	body.dark-mode {
+		.cs-wave {
+			filter: grayscale(1) brightness(10%);
+		}
+	}
+	body.dark-mode{
+		#hero-929{ 
+			.cs-title, .cs-text{
+				color: white;
+				text-shadow:
+							0.04px 0 black,
+							0 0.04px black,
+							-0.04px 0 black,
+							0 -0.04px black,
+							-0.04px -0.04px black,
+							-0.04px 0.04px black,
+							0.04px -0.04px black,
+							0.04px 0.04px black;
+			}
+			
+		}
+	}
