@@ -11,7 +11,18 @@ font-size: 18px;
     #sbs-r-870 {
         padding: var(--sectionPadding);
         padding-bottom: 0;
+        position: relative;
 
+    .cs-wave {
+                width: 110%;
+                height: 200px;
+                position: absolute;
+                overflow: hidden;
+                bottom: 0px;
+                transform: translateX(-20px);
+                transition: filter 0.3s;
+                z-index: -1;
+            }
         .cs-container {
             padding: var(--sectionPadding);
             width: 100%;
@@ -100,6 +111,11 @@ font-size: 18px;
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #sbs-r-870 {
+            .cs-wave {
+                    path {
+                        fill: #2c394b;
+                    }
+                }
             .cs-title,
             .cs-text {
                 color: var(--bodyTextColorWhite);
@@ -127,7 +143,6 @@ font-size: 18px;
     #sbs-515 {
         padding: var(--sectionPadding);
         background: var(--primaryLight);
-
         .cs-container {
             width: 100%;
             /* changes to 1280px at tablet */
@@ -153,14 +168,8 @@ font-size: 18px;
         .cs-color {
             color: var(--primary);
         }
-
-        .cs-title {
-            color: var(--bodyTextColor);
-        }
-
         .cs-text {
             margin-bottom: (16/16rem);
-            color: var(--bodyTextColor);
             opacity: .8;
 
             &:last-of-type {
@@ -187,7 +196,6 @@ font-size: 18px;
             line-height: 1.5em;
             font-weight: 700;
             margin: 0;
-            color: var(--bodyTextColo);
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -199,7 +207,6 @@ font-size: 18px;
             line-height: 1.5em;
             font-weight: 400;
             margin: 0;
-            color: var(--bodyTextColor);
         }
 
         .cs-picture {
@@ -238,11 +245,6 @@ font-size: 18px;
         .cs-image-group {
             width: 68%;
         }
-
-        .cs-picture {
-            /* 340px - 461px */
-            height: clamp(14rem, 25vw, 20rem);
-        }
     }
 }
 
@@ -250,7 +252,7 @@ font-size: 18px;
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #sbs-515 {
-            background-color: rgba(0, 0, 0, .2);
+            background-color: var(--medium);     
         }
     }
 }
@@ -263,6 +265,17 @@ font-size: 18px;
 @media only screen and (min-width: 0rem) {
     #sbs-516 {
         padding: var(--sectionPadding);
+         position: relative;
+                
+                    .cs-wave {
+                        width: 110%;
+                        height: 100px;
+                        position: absolute;
+                        overflow: hidden;
+                        top: 0px;
+                        transform: translateX(-20px) rotate(180deg);
+                        z-index: -1;
+                    }
 
         .cs-container {
             width: 100%;
@@ -289,14 +302,8 @@ font-size: 18px;
         .cs-color {
             color: var(--primary);
         }
-
-        .cs-title {
-            color: var(--bodyTextColor);
-        }
-
         .cs-text {
             margin-bottom: (16/16rem);
-            color: var(--bodyTextColor);
             opacity: .8;
 
             &:last-of-type {
@@ -323,7 +330,6 @@ font-size: 18px;
             line-height: 1.5em;
             font-weight: 700;
             margin: 0;
-            color: var(--bodyTextColo);
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -335,7 +341,6 @@ font-size: 18px;
             line-height: 1.5em;
             font-weight: 400;
             margin: 0;
-            color: var(--bodyTextColor);
         }
 
         .cs-picture {
@@ -343,6 +348,7 @@ font-size: 18px;
             height: 100%;
             display: block;
             position: relative;
+            order: -2;
 
             img {
                 top: 0;
@@ -375,15 +381,22 @@ font-size: 18px;
         }
 
         .cs-picture {
-            /* 340px - 461px */
-            height: clamp(14rem, 25vw, 20rem);
+            order: 0;
         }
     }
 }
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-    
+    body.dark-mode{
+    #sbs-516{
+        .cs-wave{
+            path {
+                fill: #2c394b;
+            }
+        }
+    }
+}
 }
 
 
