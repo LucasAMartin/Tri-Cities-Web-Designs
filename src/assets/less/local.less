@@ -559,6 +559,17 @@
 	#pricing-357 {
 		padding: var(--sectionPadding);
 		padding-top: 0;
+		position: relative;
+		
+		.cs-wave {
+			width: 110%;
+			height: 200px;
+			position: absolute;
+			overflow: hidden;
+			bottom: 0px;
+			transform: translateX(-20px);
+			transition: filter 0.3s;
+		};
 
 		.cs-container {
 			width: 100%;
@@ -796,21 +807,11 @@
 /* Tablet 768px */
 @media only screen and (min-width: 48rem) {
 	#pricing-357 {
-		position: relative;
 		.cs-card-group {
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-between;
 			flex-wrap: nowrap;
-		}
-		.cs-wave {
-			width: 110%;
-			height: 200px;
-			position: absolute;
-			overflow: hidden;
-			bottom: 0px;
-			transform: translateX(-20px);
-			transition: filter 0.3s;
 		}
 
 		.cs-item {
