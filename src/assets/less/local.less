@@ -40,6 +40,10 @@
 			align-items: center;
 			/* set text align to left if content needs to be left aligned */
 			text-align: center;
+
+			.cs-title span{
+				color: var(--primary);
+			}
 		}
 
 		.cs-card-group {
@@ -213,9 +217,8 @@
 @media only screen and (min-width: 0rem) {
 
 	#services-1201 {
-		/* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-		font-family: "Roboto", "Arial", sans-serif;
 		padding: var(--sectionPadding);
+		padding-top: 0;
 
 		.cs-container {
 			max-width: (1280/16rem);
@@ -236,11 +239,16 @@
 			flex-direction: column;
 			/* centers content horizontally, set to flex-start to left align */
 			align-items: center;
+			
 		}
 
 		.cs-flex-group {
 			display: flex;
 			flex-direction: column;
+
+			.cs-title span {
+					color: var(--primary);
+				}
 		}
 	}
 
@@ -278,9 +286,6 @@
 					color: #fff;
 				}
 
-				.cs-icon {
-					transform: rotateY(360deg) translateY(-0.25rem);
-				}
 			}
 		}
 
