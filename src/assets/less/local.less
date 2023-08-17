@@ -269,6 +269,7 @@
 			display: flex;
 			flex-direction: column;
 			transition: background-color .3s;
+			box-shadow: 0 0 20px -10px #f78da7;
 
 			&:hover {
 				background: var(--primaryLight);
@@ -551,10 +552,8 @@
 /* Mobile */
 @media only screen and (min-width: 0rem) {
 	#pricing-357 {
-		/* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-		font-family: 'Roboto', 'Arial', sans-serif;
 		padding: var(--sectionPadding);
-		background-color: #F7F7F7;
+		padding-top: 0;
 
 		.cs-container {
 			width: 100%;
@@ -563,8 +562,26 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			position: relative;
 			/* 48px - 64px */
 			gap: clamp(3rem, 6vw, 4rem);
+
+					&:after {
+							content: '';
+							position: absolute;
+							display: block;
+							height: (1108/16rem);
+							width: (2000/16rem);
+							background: url('/assets/svgs/cta-squares.svg');
+							background-size: contain;
+							background-position: center;
+							background-repeat: no-repeat;
+							opacity: 1;
+							bottom: 0;
+							left: 50%;
+							transform: translateX(-50%);
+							z-index: -3;
+						}
 		}
 
 		.cs-content {
@@ -575,6 +592,10 @@
 			flex-direction: column;
 			/* centers content horizontally, set to flex-start to left align */
 			align-items: center;
+
+		.cs-title span {
+				color: var(--primary);
+				}
 		}
 
 		.cs-card-group {
@@ -758,13 +779,6 @@
 				margin-bottom: 0;
 			}
 		}
-
-		.cs-disabled {
-			/* fades out list items that are disabled from the price tier */
-			filter: grayscale(1);
-			opacity: .3;
-		}
-
 		.cs-li-img {
 			width: (20 / 16) * 1rem;
 			height: auto;
@@ -777,11 +791,21 @@
 /* Tablet 768px */
 @media only screen and (min-width: 48rem) {
 	#pricing-357 {
+		position: relative;
 		.cs-card-group {
 			flex-direction: row;
 			flex-wrap: wrap;
 			justify-content: space-between;
 			flex-wrap: nowrap;
+		}
+		.cs-wave {
+			width: 110%;
+			height: 200px;
+			position: absolute;
+			overflow: hidden;
+			bottom: 0px;
+			transform: translateX(-20px);
+			transition: filter 0.3s;
 		}
 
 		.cs-item {
@@ -813,9 +837,13 @@
 	body.dark-mode {
 		#pricing-357 {
 			background-color: var(--dark);
+			
+			.cs-wave{
+				filter: grayscale(1) brightness(23%);
+			}
 
-			.cs-topper {
-				color: var(--primaryLight);
+			.cs-container:after{
+				background: url('/assets/svgs/cta-square.svg');
 			}
 
 			.cs-title,
