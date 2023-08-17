@@ -1006,3 +1006,344 @@ html {
 		}
 	}
 }
+
+
+/*-- -------------------------- -->
+<---          Pricing           -->
+<--- -------------------------- -*/
+
+/* Mobile */
+@media only screen and (min-width: 0rem) {
+	#pricing-357 {
+		padding: var(--sectionPadding);
+		padding-top: 0;
+		position: relative;
+
+		.cs-wave {
+			width: 110%;
+			height: 200px;
+			position: absolute;
+			overflow: hidden;
+			bottom: 0px;
+			transform: translateX(-20px);
+			transition: filter 0.3s;
+		}
+
+		;
+
+		.cs-container {
+			width: 100%;
+			max-width: (1280 / 16) * 1rem;
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+			/* 48px - 64px */
+			gap: clamp(3rem, 6vw, 4rem);
+
+			&:after {
+				content: '';
+				position: absolute;
+				display: block;
+				height: (1108/16rem);
+				width: (2000/16rem);
+				background: url('/assets/svgs/cta-squares.svg');
+				background-size: contain;
+				background-position: center;
+				background-repeat: no-repeat;
+				opacity: 1;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: -3;
+			}
+		}
+
+		.cs-content {
+			/* set text align to left if content needs to be left aligned */
+			text-align: center;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			/* centers content horizontally, set to flex-start to left align */
+			align-items: center;
+
+			.cs-title span {
+				color: var(--primary);
+			}
+		}
+
+		.cs-card-group {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			/* 16px - 20px */
+			gap: clamp(1rem, 2vw, 1.25rem);
+		}
+
+		.cs-item {
+			list-style: none;
+			/* 20px - 32px top & bottom */
+			/* 16px - 32px left & right */
+			padding: clamp(1.25rem, 3vw, 2rem) clamp(1rem, 2.4vw, 2rem);
+			width: 100%;
+			max-width: (413 / 16) * 1rem;
+			border-radius: (16 / 16) * 1rem;
+			background: #fff;
+			border: 1px solid #E8E8E8;
+			/* prevents padding from adding to height and width */
+			box-sizing: border-box;
+
+			&:nth-of-type(2) {
+
+				.cs-option2-text,
+				.cs-option1-text {
+					transition-delay: .1s;
+				}
+			}
+
+			&:nth-of-type(3) {
+
+				.cs-option2-text,
+				.cs-option1-text {
+					transition-delay: .2s;
+				}
+			}
+		}
+
+		.cs-popular {
+			background: var(--primary);
+			position: relative;
+			/* clips the popular tag */
+			overflow: hidden;
+			/* send to the top */
+			order: -1;
+
+			&:before {
+				/* Most Popular Tag */
+				content: 'Popular';
+				font-size: (14 / 16) * 1rem;
+				text-align: center;
+				line-height: (29 / 16) * 1em;
+				font-weight: 700;
+				width: (170 / 16) * 1rem;
+				padding: 0 (12 / 16) * 1rem;
+				color: var(--bodyTextColorWhite);
+				background-color: var(--secondary);
+				position: absolute;
+				display: block;
+				top: (20 / 16) * 1rem;
+				right: (-60 / 16) * 1rem;
+				transform: rotate(42deg);
+			}
+
+			.cs-h3,
+			.cs-item-text,
+			.cs-price,
+			.cs-included,
+			.cs-li,
+			.cs-small {
+				color: var(--bodyTextColorWhite);
+			}
+
+			.cs-button-solid {
+				background-color: #fff;
+				color: var(--primary);
+				transition: color .3s;
+
+				&:before {
+					background-color: var(--secondary);
+				}
+
+				&:hover {
+					color: #fff;
+				}
+			}
+
+			.cs-li-img {
+				/* turns the check mark white */
+				filter: brightness(900%);
+			}
+		}
+
+		.cs-h3 {
+			font-size: (20 / 16) * 1rem;
+			line-height: 1.2em;
+			font-weight: 700;
+			margin: 0 0 (4 / 16) * 1rem;
+			padding: 0;
+			color: var(--bodyTextColor);
+		}
+
+		.cs-item-text {
+			font-size: (14 / 16) * 1rem;
+			line-height: 1.5em;
+			/* 16px - 24px */
+			margin: 0 0 clamp(1rem, 2vw, 1.5rem);
+			padding: 0;
+			color: var(--bodyTextColor);
+		}
+
+		.cs-option-group {
+			position: relative;
+
+			&:after {
+				/* top right box */
+				content: '';
+				width: 100%;
+				height: 1px;
+				/* 32px - 40px */
+				margin-bottom: clamp(2rem, 4vw, 2.5rem);
+				background: linear-gradient(90deg, rgba(232, 232, 232, 0.2) 0%, #E8E8E8 53.78%, rgba(232, 232, 232, 0.2) 100%);
+				opacity: 1;
+				position: relative;
+				display: block;
+			}
+		}
+
+		.cs-price {
+			font-size: (49 / 16) * 1rem;
+			line-height: 1.2em;
+			font-weight: 700;
+			margin-bottom: (24 / 16) * 1rem;
+			color: var(--bodyTextColor);
+			/* spans are inline, need to add block for margin to work */
+			display: block;
+		}
+
+		.cs-small {
+			font-size: (14 / 16) * 1rem;
+			font-weight: 400;
+			color: #4E4B66;
+		}
+
+		.cs-included {
+			font-size: (16 / 16) * 1rem;
+			line-height: 1.5em;
+			font-weight: 700;
+			/* 16px - 24px */
+			margin-bottom: clamp(1rem, 3vw, 1.5rem);
+			color: var(--bodyTextColor);
+			display: block;
+		}
+
+		.cs-ul {
+			padding: 0;
+			margin: 0;
+			/* 32px - 40px */
+			margin-bottom: clamp(2rem, 4vw, 2.5rem);
+		}
+
+		.cs-li {
+			/* 14px - 16px */
+			font-size: clamp(.875rem, 1.5vw, 1rem);
+			line-height: 1.5em;
+			list-style: none;
+			padding: 0;
+			margin: 0 0 (12 / 16) * 1rem;
+			color: var(--bodyTextColor);
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		.cs-li-img {
+			width: (20 / 16) * 1rem;
+			height: auto;
+			margin-top: (3 / 16) * 1rem;
+			margin-right: (8 / 16) * 1rem;
+		}
+	}
+}
+
+/* Tablet 768px */
+@media only screen and (min-width: 48rem) {
+	#pricing-357 {
+		.cs-card-group {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			flex-wrap: nowrap;
+		}
+
+		.cs-item {
+			width: 100%;
+			/* ensures they stay the same height if you add more content */
+			align-self: stretch;
+		}
+
+		.cs-popular {
+			/* send back to its original order */
+			order: unset;
+		}
+
+		#cs-option2-357 {
+			&:before {
+				top: (-10 / 16) * 1rem;
+			}
+
+			&:after {
+				top: (-35 / 16) * 1rem;
+				right: (-100 / 16) * 1rem;
+			}
+		}
+	}
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+	body.dark-mode {
+		#pricing-357 {
+			background-color: var(--dark);
+
+			.cs-wave {
+				filter: grayscale(1) brightness(23%);
+			}
+
+			.cs-container:after {
+				background: url('/assets/svgs/cta-square.svg');
+			}
+
+			.cs-title,
+			.cs-text {
+				color: var(--bodyTextColorWhite);
+			}
+
+			.cs-plan {
+				color: var(--bodyTextColorWhite);
+			}
+
+			.cs-item {
+				background: var(--accent);
+				border-color: var(--medium);
+			}
+
+			.cs-popular {
+				background: var(--primary);
+			}
+
+			.cs-h3,
+			.cs-item-text,
+			.cs-price,
+			.cs-included,
+			.cs-li,
+			.cs-small {
+				color: var(--bodyTextColorWhite);
+			}
+
+			.cs-li-img {
+				/* make so bright it turns white */
+				filter: brightness(900%) grayscale(1);
+			}
+		}
+	}
+}
