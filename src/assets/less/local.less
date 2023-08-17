@@ -185,11 +185,6 @@
 					}
 				}
 			}
-
-			.cs-topper {
-				color: var(--primary);
-			}
-
 			.cs-title,
 			.cs-text,
 			.cs-h3,
@@ -276,14 +271,9 @@
 			transition: background-color .3s;
 
 			&:hover {
-				background: #1a1a1a;
-
-				.cs-h3 {
-					color: var(--primary);
-				}
-
+				background: var(--primaryLight);
 				.cs-item-text {
-					color: #fff;
+					color: var(--bodyTextColor);
 				}
 
 			}
@@ -382,21 +372,12 @@
 @media only screen and (min-width: 0rem) {
 	body.dark-mode {
 		#services-1201 {
-			.cs-topper {
-				color: var(--primaryLight);
-			}
-
 			.cs-item {
 				background-color: var(--medium);
 			}
 
 			.cs-item-text {
 				opacity: 0.8;
-			}
-
-			.cs-icon {
-				/* turns it white */
-				filter: grayscale(1) brightness(1000%);
 			}
 
 			.cs-title,
