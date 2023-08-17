@@ -37,4 +37,11 @@ function detectColorScheme() {
 document.getElementById('dark-mode-toggle').addEventListener('click', () => {
 	// on click, check localStorage for the dark mode value, use to apply the opposite of what's saved
 	localStorage.getItem('theme') === 'light' ? enableDarkMode() : disableDarkMode();
+    if (document.body.classList.contains("dark-mode")) {
+      document.querySelector(".cs-logo img").src =
+        "/assets/images/logoLong.png";
+    } else {
+      document.querySelector(".cs-logo img").src =
+        "/assets/images/logoWhite.png";
+    }
 });
