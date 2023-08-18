@@ -28,13 +28,7 @@ function detectColorScheme() {
 
 	// if there is no preference set, the default of light will be used. apply accordingly
 	theme === 'dark' ? enableDarkMode() : disableDarkMode();
-	if (document.body.classList.contains("dark-mode")) {
-      document.querySelector(".cs-logo img").src =
-        "/assets/images/logoLong.png";
-    } else {
-      document.querySelector(".cs-logo img").src =
-        "/assets/images/logoWhite.png";
-    }
+	checkLogo();
 }
 
 // run on page load
@@ -44,11 +38,19 @@ detectColorScheme();
 document.getElementById('dark-mode-toggle').addEventListener('click', () => {
 	// on click, check localStorage for the dark mode value, use to apply the opposite of what's saved
 	localStorage.getItem('theme') === 'light' ? enableDarkMode() : disableDarkMode();
-    if (document.body.classList.contains("dark-mode")) {
-      document.querySelector(".cs-logo img").src =
-        "/assets/images/logoLong.png";
-    } else {
-      document.querySelector(".cs-logo img").src =
-        "/assets/images/logoWhite.png";
-    }
+    checkLogo();
 });
+
+function checkLogo(){
+	if (document.body.classList.contains("dark-mode")) {
+  document.querySelector(".cs-logo picture source").srcset =
+    "/assets/images/logoLong.webp";
+  document.querySelector(".cs-logo img").src =
+    "/assets/images/logoLong.png";
+} else {
+  document.querySelector(".cs-logo picture source").srcset =
+    "/assets/images/logoWhite.webp";
+  document.querySelector(".cs-logo img").src =
+    "/assets/images/logoWhite.png";
+}
+}
