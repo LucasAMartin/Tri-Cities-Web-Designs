@@ -6,214 +6,342 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-	#sbsr-524 {
-		padding: var(--sectionPadding);
-		position: relative;
+  #sbsr-524 {
+    padding: var(--sectionPadding);
+    position: relative;
 
-				.cs-wave {
-						width: 110%;
-						height: 400px;
-						position: absolute;
-						overflow: hidden;
-						top: 0px;
-						transform: translateX(-20px);
-						transition: filter 0.3s;
-						z-index: -1;
-					}
-						.cs-wave-bottom{
-										width: 110%;
-											height: 200px;
-											position: absolute;
-											overflow: hidden;
-											bottom: 0px;
-											transform: translateX(-20px);
-											transition: filter 0.3s;
-											z-index: -1;
-			}
-		@keyframes floatAnimation {
-			0% {
-				transform: translateY(0);
-			}
+    .cs-wave {
+      width: 110%;
+      height: 400px;
+      position: absolute;
+      overflow: hidden;
+      top: 0px;
+      transform: translateX(-20px);
+      transition: filter 0.3s;
+      z-index: -1;
+    }
+    .cs-wave-bottom {
+      width: 110%;
+      height: 100px;
+      position: absolute;
+      overflow: hidden;
+      bottom: 0px;
+      transform: translateX(-20px);
+      transition: filter 0.3s;
+      z-index: -1;
+    }
+    @keyframes floatAnimation {
+      0% {
+        transform: translateY(0);
+      }
 
-			50% {
-				transform: translateY(-.6em);
-			}
+      50% {
+        transform: translateY(-0.6em);
+      }
 
-			100% {
-				transform: translateY(0);
-			}
-		}
+      100% {
+        transform: translateY(0);
+      }
+    }
 
-		@keyframes floatAnimation2 {
-			0% {
-				transform: translateY(0);
-			}
+    @keyframes floatAnimation2 {
+      0% {
+        transform: translateY(0);
+      }
 
-			50% {
-				transform: translateY(-1em);
-			}
+      50% {
+        transform: translateY(-1em);
+      }
 
-			100% {
-				transform: translateY(0);
-			}
-		}
+      100% {
+        transform: translateY(0);
+      }
+    }
 
-		.cs-container {
-			width: 100%;
-			/* changes to 1280px at desktop */
-			max-width: (550/16em);
-			margin: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			/* 48px - 64px */
-			gap: clamp(3rem, 6vw, 4rem);
+    .cs-container {
+      width: 100%;
+      /* changes to 1280px at desktop */
+      max-width: (550/16em);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
 
-						.cs-button-solid {
-								background-color: var(--pink);
-							}
-		}
+    .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: flex-start;
+    }
 
-		.cs-content {
-			/* set text align to left if content needs to be left aligned */
-			text-align: left;
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			/* centers content horizontally, set to flex-start to left align */
-			align-items: flex-start;
-		}
+    .cs-color {
+      color: var(--secondary);
+    }
 
-		.cs-color {
-			color: var(--secondary);
-		}
+    .cs-text {
+      /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+      margin-bottom: (16/16rem);
 
-		.cs-text {
-			/* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
-			margin-bottom: (16/16rem);
+      &:last-of-type {
+        margin-bottom: (32/16rem);
+      }
+    }
 
-			&:last-of-type {
-				margin-bottom: (32/16rem);
-			}
-		}
+    .cs-image-group {
+      /* this is how we can scale entire groups using ems.  Font size is tied to the view width, so as the screen gets bigger, so does the font size, and this scales up and down the elements with em values.  Then it stops growing once the font size reaches the defined value of 1em (16px which is default on the html element). Font size changes at desktop */
+      font-size: ~"min(2.3vw, .875em)";
+      /* all values are done in ems, not rems, so we can scale the group with a font size min/max equation */
+      width: (630/16em);
+      height: (817/16em);
+      position: relative;
+      /* pushes it to the top in the first position */
+      order: -1;
 
-		.cs-image-group {
-			/* this is how we can scale entire groups using ems.  Font size is tied to the view width, so as the screen gets bigger, so does the font size, and this scales up and down the elements with em values.  Then it stops growing once the font size reaches the defined value of 1em (16px which is default on the html element). Font size changes at desktop */
-			font-size: ~"min(2.3vw, .875em)";
-			/* all values are done in ems, not rems, so we can scale the group with a font size min/max equation */
-			width: (630/16em);
-			height: (817/16em);
-			position: relative;
-			/* pushes it to the top in the first position */
-			order: -1;
+      &:before {
+        content: "";
+        width: (186/16em);
+        height: (161/16em);
+        background: var(--primary);
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: (0/16em);
+        right: (0/16em);
+        animation-name: floatAnimation;
+        animation-duration: 6s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        border-radius: 5px;
+      }
+    }
 
-			&:before {
-				content: '';
-				width: (186/16em);
-				height: (161/16em);
-				background: var(--primary);
-				opacity: 1;
-				position: absolute;
-				display: block;
-				top: (0/16em);
-				right: (0/16em);
-				animation-name: floatAnimation;
-				animation-duration: 6s;
-				animation-timing-function: ease-in-out;
-				animation-fill-mode: forwards;
-				animation-iteration-count: infinite;
-				border-radius: 5px;
-			}
-		}
+    .cs-picture {
+      display: block;
+      position: absolute;
 
-		.cs-picture {
-			display: block;
-			position: absolute;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* makes it act like a background image */
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
 
-			img {
-				position: absolute;
-				top: 0;
-				left: 0;
-				height: 100%;
-				width: 100%;
-				/* makes it act like a background image */
-				object-fit: cover;
-				border-radius: 5px;
-			}
-		}
-
-		.cs-picture-large {
-			width: (476/16em);
-			height: (677/16em);
-			top: (70/16em);
-			right: (62/16em);
-		}
-	}
-
+    .cs-picture-large {
+      width: (476/16em);
+      height: (677/16em);
+      top: (70/16em);
+      right: (62/16em);
+    }
+  }
 }
 
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-	#sbsr-524 {
-		.cs-container {
-			max-width: (1280/16rem);
-			flex-direction: row;
-			justify-content: space-between;
-		}
+  #sbsr-524 {
+    .cs-container {
+      max-width: (1280/16rem);
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
-		.cs-content {
-			width: 51%;
-			max-width: (550/16rem);
-		}
+    .cs-content {
+      width: 51%;
+      max-width: (550/16rem);
+    }
 
-		.cs-image-group {
-			font-size: ~"min(1.1vw, 1em)";
-			/* sends it to the right in the 2nd position */
-			order: 2;
-		}
-	}
+    .cs-image-group {
+      font-size: ~"min(1.1vw, 1em)";
+      /* sends it to the right in the 2nd position */
+      order: 2;
+    }
+  }
 }
 
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
-	body.dark-mode {
-		#sbsr-524 {
-			.cs-wave {
-				filter: grayscale(1) brightness(10%);
-			}
-			.cs-wave-bottom {
-				filter: grayscale(1) brightness(23%);
-				}
+  body.dark-mode {
+    #sbsr-524 {
+      .cs-wave {
+        filter: grayscale(1) brightness(10%);
+      }
+      .cs-wave-bottom {
+        filter: grayscale(1) brightness(23%);
+      }
 
-			.cs-title,
-			.cs-text {
-				color: var(--bodyTextColorWhite);
-			}
+      .cs-title,
+      .cs-text {
+        color: var(--bodyTextColorWhite);
+      }
 
-			.cs-text {
-				opacity: .8;
-			}
+      .cs-text {
+        opacity: 0.8;
+      }
+      .cs-image-group {
+        &:before {
+          background-color: var(--secondary);
+          opacity: 0.3;
+        }
+      }
+    }
+  }
+}
 
-			.cs-button-solid {
-				background-color: #fff;
-				color: var(--primary);
-				transition: color .3s;
+/*-- -------------------------- -->
+<---           Steps            -->
+<--- -------------------------- -*/
 
-				&:hover {
-					color: #fff;
-				}
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #steps-1174 {
+    padding: var(--sectionPadding);
+    padding-top: 0;
+    background-color: #7286d3;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 
-				&:before {
-					background-color: var(--secondary);
-				}
-			}
+    .cs-color {
+      color: var(--pink);
+    }
 
-			.cs-image-group {
-				&:before {
-					background-color: var(--secondary);
-					opacity: .3;
-				}
-			}
-		}
-	}
+    .cs-container {
+      width: 100%;
+      /* changes to 1280px at desktop */
+      max-width: (704/16rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+
+    .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+    }
+    .cs-title,
+    .cs-text {
+      color: var(--bodyTextColorWhite);
+    }
+    .cs-card-group {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: (20/16rem);
+    }
+
+    .cs-item {
+      text-align: center;
+      list-style: none;
+      display: flex;
+      grid-column: span 12;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      &:nth-of-type(even) {
+        &:after {
+          /* scaleX -1 flips it horizontally */
+          transform: rotate(-135deg) scaleX(-1);
+        }
+      }
+    }
+
+    .cs-picture {
+      margin-bottom: (24/16rem);
+      width: (88/16rem);
+      height: (88/16rem);
+      border: 1px solid rgba(255, 252, 243, 0.5);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--secondary);
+    }
+
+    .cs-icon {
+      width: (40/16rem);
+      height: auto;
+      display: block;
+    }
+
+    .cs-h3 {
+      font-size: (20/16rem);
+      line-height: 1.2em;
+      text-align: inherit;
+      margin: 0 0 (12/16rem) 0;
+      color: var(--bodyTextColorWhite);
+    }
+
+    .cs-item-p {
+      font-size: (16/16rem);
+      line-height: 1.5em;
+      text-align: inherit;
+      max-width: (342/16rem);
+      margin: 0;
+      color: var(--bodyTextColorWhite);
+    }
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #steps-1174 {
+    .cs-container {
+      max-width: (1280/16rem);
+    }
+
+    .cs-item {
+      grid-column: span 4;
+
+      &:nth-of-type(1) {
+        &:after {
+          transform: rotate(45deg);
+        }
+      }
+
+      &:nth-of-type(2) {
+        &:after {
+          transform: rotate(135deg) scaleX(-1);
+        }
+      }
+
+      &:after {
+        margin: 0;
+        position: absolute;
+        right: (-48/16rem);
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+  body.dark-mode {
+    #steps-1174 {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
 }
