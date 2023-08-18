@@ -4,7 +4,7 @@ backend:
 
 local_backend: true
 # change url to a link to the image you want to use, no file paths, must be a URL
-logo_url: https://codestitch.app/frontend/images/logo.png
+logo_url: https://res.cloudinary.com/dd5n9ze5w/image/upload/v1692395466/logo_j6nhza.png
 
 media_folder: "public/assets/images/blog"
 public_folder: "/assets/images/blog"
