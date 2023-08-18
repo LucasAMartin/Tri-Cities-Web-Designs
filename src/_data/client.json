@@ -1,15 +1,13 @@
 {
   "name": "Tri-Cities Web Designs",
-  "email": "luucasmartin.allen@gmail.com",
-  "phoneForTel": "555-779-4404",
-  "phoneFormatted": "(555) 779-4404",
+  "email": "lucasmartin.allen@gmail.com",
+  "phoneForTel": "509-551-8654",
+  "phoneFormatted": "(509) 551-8654",
   "address": {
-    "lineOne": "First Address Line",
-    "lineTwo": "Second Address Line",
     "city": "Kennewick",
     "state": "WA",
     "zip": "99337",
-    "mapLink": "https://goo.gl/maps/UAQn4vuGDiwv7DV39"
+    "mapLink": "https://goo.gl/maps/mJb39NzMV1iJXUUH9"
   },
   "domain": "www.codestitch.app"
 }
