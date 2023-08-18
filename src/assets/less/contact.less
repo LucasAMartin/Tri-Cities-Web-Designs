@@ -13,6 +13,16 @@
     position: relative;
     z-index: 1;
 
+    .cs-wave {
+      width: 110%;
+      height: clamp(100px, 15vw, 300px);
+      position: absolute;
+      overflow: hidden;
+      bottom: 0px;
+      transform: translateX(-20px);
+      transition: filter 0.3s;
+    }
+
     .cs-container {
       width: 100%;
       /* changes to 1280px at desktop */
@@ -259,6 +269,9 @@
   body.dark-mode {
     #contact-1151 {
       background-color: rgba(0, 0, 0, 0.2);
+      .cs-wave {
+        filter: grayscale(1) brightness(23%);
+      }
       .cs-title,
       .cs-text,
       .cs-header,

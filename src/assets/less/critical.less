@@ -6,114 +6,104 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
+  #hero-929 {
+    padding: var(--sectionPadding);
+    background-color: var(--secondary);
+    padding-top: clamp(6rem, 18vw, 10rem);
+    padding-bottom: 0;
+    position: relative;
 
-	#hero-929 {
-		padding: var(--sectionPadding);
-		background-color: var(--secondary);
-		/* 160px - 200px */
-		padding-top: clamp(10rem, 16vw, 12.5rem);
-		padding-bottom: 0;
-		position: relative;
+    .cs-wave {
+      width: 110%;
+      position: absolute;
+      overflow: hidden;
+      top: 0px;
+      transform: translateX(-20px) rotate(180deg);
+      transition: filter 0.3s;
+    }
 
-		.cs-wave{
-			width: 110%;
-			position: absolute;
-			overflow: hidden;
-			top: 0px;
-			transform: translateX(-20px) rotate(180deg);
-			transition: filter 0.3s;
-		}
+    .cs-container {
+      width: 100%;
+      max-width: (1280/16rem);
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+      position: relative;
+    }
 
-		.cs-container {
-			width: 100%;
-			max-width: (1280/16rem);
-			margin: auto;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			/* 48px - 64px */
-			gap: clamp(3rem, 6vw, 4rem);
-			position: relative;
-		}
+    .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(1rem, 2vw, 2rem);
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+    }
+    .cs-title {
+      /* 39px - 61px */
+      font-size: clamp(3rem, 8vw, 4.5rem);
+      font-weight: 900;
+      line-height: 1.2em;
+      text-align: inherit;
+      max-width: (1096/16rem);
+      /* 8px - 16px */
+      margin: 0 0 clamp(0.5rem, 2vw, 1rem) 0;
+      color: var(--bodyTextColorWhite);
+      position: relative;
+      z-index: 2;
+      text-transform: none;
+    }
+    .cs-content-group {
+      z-index: 2;
+    }
+    .cs-text {
+      font-size: 22px;
+      line-height: 1.5em;
+      text-align: inherit;
+      width: 100%;
+      max-width: (650/16rem);
+      margin: 0 auto (28/16rem) auto;
+      color: var(--bodyTextColorWhite);
+    }
+    .body.dark-mode {
+      .cs-text,
+      .cs-title {
+        color: white;
+        text-shadow: 0.02px 0 black, 0 0.02px black, -0.02px 0 black,
+          0 -0.02px black, -0.02px -0.02px black, -0.02px 0.02px black,
+          0.02px -0.02px black, 0.02px 0.02px black;
+      }
+    }
+    .cs-picture {
+      width: 100%;
+      height: auto;
+      max-height: (598/16rem);
+      display: flex;
+      align-items: flex-end;
+      margin-top: clamp(3rem, 6vw, 4rem);
 
-		.cs-content {
-			/* set text align to left if content needs to be left aligned */
-			text-align: center;
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			gap: clamp(1rem, 2vw, 2rem);
-			/* centers content horizontally, set to flex-start to left align */
-			align-items: center;
-		}
-		.cs-title {
-			/* 39px - 61px */
-			font-size: clamp(3rem, 8vw, 4.5rem);
-			;
-			font-weight: 900;
-			line-height: 1.2em;
-			text-align: inherit;
-			max-width: (1096/16rem);
-			/* 8px - 16px */
-			margin: 0 0 clamp(.5rem, 2vw, 1rem) 0;
-			color: var(--bodyTextColorWhite);
-			position: relative;		
-			z-index: 2;
-			text-transform: none;
-		}
-		.cs-content-group{
-			z-index: 2;
-		}
-		.cs-text {
-			font-size: 22px;
-			line-height: 1.5em;
-			text-align: inherit;
-			width: 100%;
-			max-width: (650/16rem);
-			margin: 0 auto (28/16rem) auto;
-			color: var(--bodyTextColorWhite);
-		}
-		.body.dark-mode {
-			.cs-text,
-			.cs-title {
-			color: white;
-			text-shadow:
-					0.02px 0 black,
-					0 0.02px black,
-					-0.02px 0 black,
-					0 -0.02px black,
-					-0.02px -0.02px black,
-					-0.02px 0.02px black,
-					0.02px -0.02px black,
-					0.02px 0.02px black;
-			}
-		}
-		.cs-picture {
-			width: 100%;
-			height: auto;
-			max-height: (598/16rem);
-			display: flex;
-			align-items: flex-end;
-			margin-top: clamp(3rem, 6vw, 4rem);
-
-			img {
-				width: 100%;
-				height: auto;
-			}
-		}
-	}
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
 }
-	body.dark-mode {
-		.cs-wave {
-			filter: grayscale(1) brightness(10%);
-		}
-	}
-	body.dark-mode{
-		#hero-929{ 
-			.cs-title, .cs-text{
-				color: white;
-				
-			}
-			
-		}
-	}
+body.dark-mode {
+  .cs-wave {
+    filter: grayscale(1) brightness(10%);
+  }
+}
+body.dark-mode {
+  #hero-929 {
+    .cs-title,
+    .cs-text {
+      color: white;
+    }
+  }
+}

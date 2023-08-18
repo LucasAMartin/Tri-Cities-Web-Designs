@@ -28,6 +28,13 @@ function detectColorScheme() {
 
 	// if there is no preference set, the default of light will be used. apply accordingly
 	theme === 'dark' ? enableDarkMode() : disableDarkMode();
+	if (document.body.classList.contains("dark-mode")) {
+      document.querySelector(".cs-logo img").src =
+        "/assets/images/logoLong.png";
+    } else {
+      document.querySelector(".cs-logo img").src =
+        "/assets/images/logoWhite.png";
+    }
 }
 
 // run on page load
