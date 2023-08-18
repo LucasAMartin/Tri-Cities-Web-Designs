@@ -102,24 +102,6 @@
       position: relative;
       /* pushes it to the top in the first position */
       order: -1;
-
-      &:before {
-        content: "";
-        width: (186/16em);
-        height: (161/16em);
-        background: var(--primary);
-        opacity: 1;
-        position: absolute;
-        display: block;
-        top: (0/16em);
-        right: (0/16em);
-        animation-name: floatAnimation;
-        animation-duration: 6s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-iteration-count: infinite;
-        border-radius: 5px;
-      }
     }
 
     .cs-picture {
@@ -135,6 +117,7 @@
         /* makes it act like a background image */
         object-fit: cover;
         border-radius: 5px;
+        box-shadow: 0 0 30px -10px var(--secondary);
       }
     }
 
