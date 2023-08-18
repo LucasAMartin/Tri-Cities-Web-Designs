@@ -11,8 +11,6 @@ eleventyNavigation:
 {% extends "layouts/base.html" %} {% block head %}
 <link rel="stylesheet" href="/css/local.css" />
 <link rel="stylesheet" href="/css/critical.css" />
-
-<script defer src="/assets/js/price.js"></script>
 <!-- Script for Netlify Identity -->
 <script
   defer
@@ -209,18 +207,18 @@ eleventyNavigation:
         <!--Mobile Image-->
         <source
           media="(max-width: 600px)"
-          srcset="/assets/images/brmockup.png"
+          srcset="/assets/images/brmockup-m.webp"
         />
         <!--Tablet and above Image-->
         <source
           media="(min-width: 601px)"
-          srcset="/assets/images/brmockup.png"
+          srcset="/assets/images/brmockup.webp"
         />
         <img
           loading="lazy"
           decoding="async"
           src="/assets/images/brmockup.png"
-          alt="hair model"
+          alt="br website example"
           width="576"
           height="598"
         />
@@ -420,7 +418,11 @@ eleventyNavigation:
           </p>
         </div>
       </li>
-      <li class="cs-item">
+      <li
+        class="cs-item"
+        onclick="location.href='services';"
+        style="cursor: pointer"
+      >
         <picture class="cs-picture">
           <img
             class="cs-icon"
@@ -583,13 +585,16 @@ eleventyNavigation:
         style="cursor: pointer"
       >
         <picture class="cs-picture">
-          <source media="(max-width: 600px)" srcset="/assets/images/br1.jpg" />
-          <source media="(min-width: 601px)" srcset="/assets/images/br1.jpg" />
+          <source
+            media="(max-width: 600px)"
+            srcset="/assets/images/br1-m.webp"
+          />
+          <source media="(min-width: 601px)" srcset="/assets/images/br1.webp" />
           <img
             loading="lazy"
             decoding="async"
             src="/assets/images/br1.jpg"
-            alt="man grinding steel"
+            alt="br services img 1"
             width="529"
             height="256"
           />
@@ -602,13 +607,12 @@ eleventyNavigation:
         style="cursor: pointer"
       >
         <picture class="cs-picture">
-          <source media="(max-width: 600px)" srcset="/assets/images/br2.jpg" />
-          <source media="(min-width: 601px)" srcset="/assets/images/br2.jpg" />
+          <source srcset="/assets/images/br2.webp" />
           <img
             loading="lazy"
             decoding="async"
             src="/assets/images/br2.jpg"
-            alt="wood worker"
+            alt="br services img 2"
             width="255"
             height="255"
           />
@@ -621,14 +625,13 @@ eleventyNavigation:
         style="cursor: pointer"
       >
         <picture class="cs-picture">
-          <source media="(max-width: 600px)" srcset="/assets/images/br3.jpg" />
-          <source media="(min-width: 601px)" srcset="/assets/images/br3.jpg" />
+          <source srcset="/assets/images/br3.webp" />
           <img
             aria-hidden="true"
             loading="lazy"
             decoding="async"
             src="/assets/images/br3.jpg"
-            alt="steel rebar grid"
+            alt="br services img 3"
             width="255"
             height="255"
           />
@@ -641,14 +644,13 @@ eleventyNavigation:
         style="cursor: pointer"
       >
         <picture class="cs-picture">
-          <source media="(max-width: 600px)" srcset="/assets/images/br5.jpg" />
-          <source media="(min-width: 601px)" srcset="/assets/images/br5.jpg" />
+          <source srcset="/assets/images/br5.webp" />
           <img
             aria-hidden="true"
             loading="lazy"
             decoding="async"
             src="/assets/images/br5.jpg"
-            alt="modern home"
+            alt="br services img 5"
             width="255"
             height="255"
           />
@@ -661,14 +663,13 @@ eleventyNavigation:
         style="cursor: pointer"
       >
         <picture class="cs-picture">
-          <source media="(max-width: 600px)" srcset="/assets/images/br6.jpg" />
-          <source media="(min-width: 601px)" srcset="/assets/images/br6.jpg" />
+          <source srcset="/assets/images/br6.webp" />
           <img
             aria-hidden="true"
             loading="lazy"
             decoding="async"
             src="/assets/images/br6.jpg"
-            alt="appliance"
+            alt="br services img 6"
             width="255"
             height="255"
           />
@@ -681,14 +682,13 @@ eleventyNavigation:
         style="cursor: pointer"
       >
         <picture class="cs-picture">
-          <source media="(max-width: 600px)" srcset="/assets/images/br4.jpg" />
-          <source media="(min-width: 601px)" srcset="/assets/images/br4.jpg" />
+          <source srcset="/assets/images/br4.webp" />
           <img
             aria-hidden="true"
             loading="lazy"
             decoding="async"
             src="/assets/images/br4.jpg"
-            alt="modern home"
+            alt="br services img 4"
             width="255"
             height="530"
           />
