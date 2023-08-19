@@ -45,8 +45,7 @@
       align-items: center;
     }
     .cs-title {
-      /* 39px - 61px */
-      font-size: clamp(3rem, 8vw, 4.5rem);
+      font-size: clamp(2rem, 8vw, 3.5rem);
       font-weight: 900;
       line-height: 1.2em;
       text-align: inherit;
@@ -62,7 +61,7 @@
       z-index: 2;
     }
     .cs-text {
-      font-size: 22px;
+      font-size: clamp(14px, 8vw, 18px);
       line-height: 1.5em;
       text-align: inherit;
       width: 100%;
@@ -90,6 +89,7 @@
       img {
         width: 100%;
         height: auto;
+        filter: drop-shadow(10px 10px 10px #242424);
       }
     }
   }
