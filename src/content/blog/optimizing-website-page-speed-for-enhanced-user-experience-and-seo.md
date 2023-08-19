@@ -5,8 +5,8 @@ author: Lucas Martin
 date: 2023-08-12T05:07:20.738Z
 tags:
   - post
-image: https://ophtek.com/wp-content/uploads/2015/04/fast-computer.png
-imageAlt: A gentlemen with a Google PageSpeed of 95+
+image: https://images.pexels.com/photos/6801647/pexels-photo-6801647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+imageAlt: Stock tracker computer
 ---
 
 In today's fast-paced digital landscape, the speed at which your website loads can make or break user engagement. Website visitors demand instant gratification, and if your site takes too long to load, they're likely to bounce off and explore alternatives. Google realizes this, and biases their search results towards better performing websites. This is where optimizing your website for page speed becomes crucial. Not only does it enhance user experience, but it also plays a significant role in search engine rankings. In this article, we'll give a brief overview of the different techniques we can employ to improve website speed.
@@ -57,7 +57,5 @@ Revamp your approach to JavaScript loading by adding the "defer" attribute to yo
 Once the optimization journey is complete, it's essential to evaluate your efforts using tools like Google Lighthouse. This tool provides valuable insights into aspects like accessibility and overall performance. Achieving a page speed score of 95 or higher, along with impressive Lighthouse scores, signifies a successful optimization process.
 
 These strategies form the cornerstone of my post-website development routine. Here at Tri-Cities Web Development, we use all of these techniques to ensure we do all that we can for website performance. Anyway, I hope this guide proves valuable in your pursuit of creating lightning-fast, well-optimized websites.
-
-
 
 <!--EndFragment-->
