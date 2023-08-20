@@ -48,6 +48,8 @@
     <meta name="theme-color" content="#ffffff" />
 
     <!-- Preloads -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
     <link rel="preload" as="image" href="/assets/images/logoWhite.png" />
     <link
       rel="preload"
@@ -90,13 +92,6 @@
       | {{ client.name }} {% endif %}
     </title>
   </head>
-  <!-- Google tag (gtag.js) -->
-  <script defer src="/assets/js/analytics.js"></script>
-  <!-- contains formerly-inline snippet -->
-  <script
-    defer
-    src="https://www.googletagmanager.com/gtag/js?id=G-YJ55P78Z7D"
-  ></script>
   <body>
     <!--Screen reader skip main nav-->
     <a class="skip" aria-label="skip to main content" href="#main"
@@ -106,5 +101,12 @@
     {% include "components/header.html" %}
     <main id="main">{% block body %}{% endblock %}</main>
     {% include "components/footer.html" %}
+    <!-- Google tag (gtag.js) -->
+    <script defer src="/assets/js/analytics.js"></script>
+    <!-- contains formerly-inline snippet -->
+    <script
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=G-YJ55P78Z7D"
+    ></script>
   </body>
 </html>
