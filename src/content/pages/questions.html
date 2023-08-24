@@ -5,7 +5,7 @@ preloadImg: ""
 permalink: "questions/"
 eleventyNavigation:
   key: FAQ
-  order: 600
+  order: 500
 ---
 
 {% extends "layouts/base.html" %} {% block head %}
@@ -32,7 +32,9 @@ eleventyNavigation:
   <div class="cs-container">
     <div class="cs-content">
       <span class="cs-topper">FAQ’s</span>
-      <h2 class="cs-title">Frequently Asked Questions</h2>
+      <h2 class="cs-title">
+        Frequently Asked <span class="cs-color">Questions</span>
+      </h2>
       <p class="cs-text">
         We've put together some frequently asked questions to help you better
         understand our services. If you have any additional questions, don’t
@@ -44,7 +46,10 @@ eleventyNavigation:
         <!-- Active class added as default -->
         <li class="cs-faq-item active">
           <button class="cs-button">
-            Can you tell me more about your $0 down and $150 per month plan?
+            <span class="span-text"
+              >Can you tell me more about your $0 down and $150 per month
+              plan?</span
+            >
           </button>
           <p class="cs-item-p">
             The $150/mo cost is for a standard 5 page informational site. This
@@ -52,12 +57,13 @@ eleventyNavigation:
             pages, they are available for $100 each. We also offer additional
             functionality such as booking and appointment scheduling for an
             additional fee of $200. These fees are one-time and due as a down
-            payment before development. We try to keep our prices as simple and
-            transparent as we can.
+            payment before development begins.
           </p>
         </li>
         <li class="cs-faq-item">
-          <button class="cs-button">What happens if I cancel early?</button>
+          <button class="cs-button">
+            <span class="span-text">What happens if I cancel early?</span>
+          </button>
           <p class="cs-item-p">
             If you decide to cancel your plan early, you will retain ownership
             of the domain and the written content on the page. However, the
@@ -69,17 +75,21 @@ eleventyNavigation:
           </p>
         </li>
         <li class="cs-faq-item">
-          <button class="cs-button">Do I own the website code?</button>
+          <button class="cs-button">
+            <span class="span-text">Do I own the website code?</span>
+          </button>
           <p class="cs-item-p">
             If you purchase lump sum, you have the full rights to the code and
-            everything in it. With a monthly subscription, you have the rights
-            to the domain and written content, but we retain the rights to the
-            source code.
+            everything in it. With our monthly subscription plan, you have the
+            rights to the domain and written content, but we retain the rights
+            to the source code.
           </p>
         </li>
         <li class="cs-faq-item">
           <button class="cs-button">
-            If I purchase lump sum, do I need to handle hosting?
+            <span class="span-text"
+              >If I purchase lump sum, do I need to handle hosting?</span
+            >
           </button>
           <p class="cs-item-p">
             If you purchase a lump sum website with the $25/mo maintenance
@@ -91,7 +101,9 @@ eleventyNavigation:
         </li>
         <li class="cs-faq-item">
           <button class="cs-button">
-            How long does it take to create my website?
+            <span class="span-text"
+              >How long does it take to create my website?</span
+            >
           </button>
           <p class="cs-item-p">
             Once the details are confirmed, we will have a first design mockup

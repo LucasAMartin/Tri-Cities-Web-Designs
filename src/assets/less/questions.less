@@ -8,6 +8,10 @@
     padding: var(--sectionPadding);
     margin-top: 1.5rem;
 
+    .cs-color {
+      color: var(--primary);
+    }
+
     .cs-wave {
       width: 110%;
       height: 400px;
@@ -86,6 +90,12 @@
       display: block;
       width: 100%;
       position: relative;
+
+      .span-text {
+        max-width: 90% !important;
+        white-space: normal !important;
+        display: block;
+      }
 
       &:hover {
         cursor: pointer;
@@ -216,7 +226,6 @@
       .cs-text {
         color: var(--bodyTextColorWhite);
       }
-
       .cs-button {
         color: var(--bodyTextColorWhite);
       }
@@ -225,7 +234,10 @@
       .cs-item-p {
         color: var(--bodyTextColorWhite);
       }
-
+      .cs-text,
+      .cs-faq-item.active .cs-item-p {
+        opacity: 0.8;
+      }
       .cs-cta {
         background: var(--medium);
       }
