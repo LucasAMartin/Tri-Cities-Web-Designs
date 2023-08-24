@@ -1,0 +1,126 @@
+---
+title: "Frequent Questions"
+description: "We've put together some frequently asked questions to help you better understand our services."
+preloadImg: ""
+permalink: "questions/"
+eleventyNavigation:
+  key: FAQ
+  order: 600
+---
+
+{% extends "layouts/base.html" %} {% block head %}
+<link rel="stylesheet" href="/css/questions.css" />
+{% endblock %} {% block body %}
+
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="faq-254">
+  <svg
+    class="cs-wave"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1440 320"
+  >
+    <path
+      fill="#e5e0ff"
+      fill-opacity="1"
+      d="M0,128L80,122.7C160,117,320,107,480,96C640,85,800,75,960,85.3C1120,96,1280,128,1360,144L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+    ></path>
+  </svg>
+  <div class="cs-container">
+    <div class="cs-content">
+      <span class="cs-topper">FAQ’s</span>
+      <h2 class="cs-title">Frequently Asked Questions</h2>
+      <p class="cs-text">
+        We've put together some frequently asked questions to help you better
+        understand our services. If you have any additional questions, don’t
+        hesitate to contact us for more information.
+      </p>
+    </div>
+    <div class="cs-flex-group">
+      <ul class="cs-faq-group">
+        <!-- Active class added as default -->
+        <li class="cs-faq-item active">
+          <button class="cs-button">
+            Can you tell me more about your $0 down and $150 per month plan?
+          </button>
+          <p class="cs-item-p">
+            The $150/mo cost is for a standard 5 page informational site. This
+            includes all hosting/maintenance costs. If you need additional
+            pages, they are available for $100 each. We also offer additional
+            functionality such as booking and appointment scheduling for an
+            additional fee of $200. These fees are one-time and due as a down
+            payment before development. We try to keep our prices as simple and
+            transparent as we can.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">What happens if I cancel early?</button>
+          <p class="cs-item-p">
+            If you decide to cancel your plan early, you will retain ownership
+            of the domain and the written content on the page. However, the
+            website code remains with us. Depending on the terms of your
+            contract, you may be liable to pay the remainder of the months for
+            the contract length. After the contract period is over, it becomes a
+            month-to-month agreement and you can cancel anytime with no fees.
+            The same code ownership rules apply in this case as well.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">Do I own the website code?</button>
+          <p class="cs-item-p">
+            If you purchase lump sum, you have the full rights to the code and
+            everything in it. With a monthly subscription, you have the rights
+            to the domain and written content, but we retain the rights to the
+            source code.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            If I purchase lump sum, do I need to handle hosting?
+          </button>
+          <p class="cs-item-p">
+            If you purchase a lump sum website with the $25/mo maintenance
+            package, you have the same services as the monthly plan. This
+            includes unlimited edits, hosting, and maintenance for the length of
+            the subscription. Otherwise, you will have to handle hosting
+            manually.
+          </p>
+        </li>
+        <li class="cs-faq-item">
+          <button class="cs-button">
+            How long does it take to create my website?
+          </button>
+          <p class="cs-item-p">
+            Once the details are confirmed, we will have a first design mockup
+            created for you within three (3) business days. Once you approve of
+            a design you like, it may take up to seven (7) business days to
+            complete development. We always make sure to keep you up to date
+            with the latest progress as we develop your website.
+          </p>
+        </li>
+      </ul>
+      <div class="cs-cta">
+        <h3 class="cs-h3">Don’t see the answer you need?</h3>
+        <p class="cs-cta-p">
+          No problem. Just drop a message and we will get back to you ASAP.
+        </p>
+        <a href="/contact" class="cs-button-solid">Contact us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include "components/pricing.html" %}
+<script>
+  const faqItems = Array.from(document.querySelectorAll(".cs-faq-item"));
+  for (const item of faqItems) {
+    const onClick = () => {
+      item.classList.toggle("active");
+    };
+    item.addEventListener("click", onClick);
+  }
+</script>
+{% endblock %}
