@@ -39,11 +39,14 @@
       /* centers content horizontally, set to flex-start to left align */
       align-items: center;
       /* set text align to left if content needs to be left aligned */
-      text-align: center;
+      text-align: left;
 
       .cs-title span {
         color: var(--primary);
       }
+    }
+    .cs-title {
+      text-align: center;
     }
 
     .cs-card-group {
@@ -170,6 +173,13 @@
   }
 }
 
+@media only screen and (min-width: 64rem) {
+  #services-1176 {
+    .cs-content {
+      text-align: center;
+    }
+  }
+}
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode {
@@ -232,6 +242,10 @@
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */
       align-items: center;
+    }
+
+    .cs-title {
+      text-align: center;
     }
 
     .cs-flex-group {
@@ -316,7 +330,6 @@
 @media only screen and (min-width: 48rem) {
   #services-1201 {
     .cs-content {
-      text-align: left;
       flex-direction: row;
       justify-content: space-between;
       align-items: end;
@@ -423,12 +436,16 @@
 
     .cs-content {
       /* set text align to left if content needs to be left aligned */
-      text-align: center;
+      text-align: left;
       width: 100%;
       display: flex;
       flex-direction: column;
       /* centers content horizontally, set to flex-start to left align */
       align-items: center;
+    }
+
+    .cs-title {
+      text-align: center;
     }
 
     .cs-card-group {
@@ -565,6 +582,9 @@
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   #steps-1171 {
+    .cs-content {
+      text-align: center;
+    }
     .cs-container {
       max-width: (1280/16rem);
     }
@@ -643,7 +663,7 @@
 
     .cs-content {
       /* set text align to left if content needs to be left aligned */
-      text-align: center;
+      text-align: left;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -653,6 +673,10 @@
       .cs-title span {
         color: var(--primary);
       }
+    }
+
+    .cs-title {
+      text-align: center;
     }
 
     .cs-image-group {
@@ -751,6 +775,14 @@
       grid-column: 10 / span 3;
       grid-row: 1 / span 2;
       aspect-ratio: initial;
+    }
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  #gallery-47 {
+    .cs-content {
+      text-align: center;
     }
   }
 }
