@@ -272,7 +272,7 @@ html {
     overflow: hidden;
   }
 
-  #cs-navigation {
+  #navigation {
     width: 100%;
     padding: 0.75rem 1rem;
     /* prevents padding from affecting height and width */
@@ -283,7 +283,7 @@ html {
     z-index: 10000;
   }
 
-  #cs-navigation:before {
+  #navigation:before {
     /* on hover green bar */
     content: "";
     width: 40%;
@@ -299,28 +299,28 @@ html {
     transition: width 0.2s, max-width 0.3s, background-color 0.3s;
   }
 
-  #cs-navigation.cs-active:before {
+  #navigation.cs-active:before {
     width: 100%;
     max-width: 100%;
     background-color: var(--secondary);
   }
 
-  #cs-navigation.cs-active .cs-link {
+  #navigation.cs-active .cs-link {
     color: var(--bodyTextColorWhite);
   }
 
-  #cs-navigation.cs-active .cs-ul-wrapper {
+  #navigation.cs-active .cs-ul-wrapper {
     opacity: 1;
     transform: scaleY(1);
     transition-delay: 0.1s;
   }
 
-  #cs-navigation.cs-active .cs-li {
+  #navigation.cs-active .cs-li {
     transform: translateY(0);
     opacity: 1;
   }
 
-  #cs-navigation .cs-logo {
+  #navigation .cs-logo {
     width: 40%;
     max-width: 9.125rem;
     height: 100%;
@@ -336,14 +336,14 @@ html {
     padding-left: 4px;
   }
 
-  #cs-navigation .cs-logo img {
+  #navigation .cs-logo img {
     width: 100%;
     height: 100%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
   }
 
-  #cs-navigation .cs-toggle {
+  #navigation .cs-toggle {
     /* 44px - 48px */
     width: clamp(2.75rem, 6vw, 3rem);
     height: clamp(2.75rem, 6vw, 3rem);
@@ -356,23 +356,23 @@ html {
     align-items: center;
   }
 
-  #cs-navigation .cs-active .cs-line1 {
+  #navigation .cs-active .cs-line1 {
     top: 50%;
     transform: translate(-50%, -50%) rotate(225deg);
   }
 
-  #cs-navigation .cs-active .cs-line2 {
+  #navigation .cs-active .cs-line2 {
     top: 50%;
     transform-origin: center;
     transform: translate(-50%, -50%) translateY(0) rotate(-225deg);
   }
 
-  #cs-navigation .cs-active .cs-line3 {
+  #navigation .cs-active .cs-line3 {
     bottom: 100%;
     opacity: 0;
   }
 
-  #cs-navigation .cs-box {
+  #navigation .cs-box {
     /* 24px - 28px */
     width: clamp(1.5rem, 2vw, 1.75rem);
     /* 14px - 16px */
@@ -380,7 +380,7 @@ html {
     position: relative;
   }
 
-  #cs-navigation .cs-line {
+  #navigation .cs-line {
     width: 100%;
     height: 2px;
     border-radius: 2px;
@@ -390,7 +390,7 @@ html {
     transform: translateX(-50%);
   }
 
-  #cs-navigation .cs-line1 {
+  #navigation .cs-line1 {
     top: 0;
     transform-origin: center;
     transition: transform 0.5s, top 0.3s, left 0.3s;
@@ -400,7 +400,7 @@ html {
     animation-direction: normal;
   }
 
-  #cs-navigation .cs-line2 {
+  #navigation .cs-line2 {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     transition: top 0.3s, left 0.3s, transform 0.5s;
@@ -410,12 +410,12 @@ html {
     animation-direction: normal;
   }
 
-  #cs-navigation .cs-line3 {
+  #navigation .cs-line3 {
     bottom: 0;
     transition: bottom 0.3s, opacity 0.3s;
   }
 
-  #cs-navigation .cs-ul-wrapper {
+  #navigation .cs-ul-wrapper {
     width: 100%;
     height: 100vh;
     opacity: 0;
@@ -431,7 +431,7 @@ html {
     transition: transform 0.4s, opacity 0.3s;
   }
 
-  #cs-navigation .cs-ul {
+  #navigation .cs-ul {
     margin: 0;
     padding: 3rem 0 3rem 0;
     width: 100%;
@@ -445,7 +445,7 @@ html {
     gap: 1.25rem;
   }
 
-  #cs-navigation .cs-li {
+  #navigation .cs-li {
     text-align: center;
     list-style: none;
     margin-right: 0;
@@ -455,43 +455,43 @@ html {
     transition: transform 0.6s, opacity 0.9s;
   }
 
-  #cs-navigation .cs-li:nth-of-type(1) {
+  #navigation .cs-li:nth-of-type(1) {
     transition-delay: 0.05s;
   }
 
-  #cs-navigation .cs-li:nth-of-type(2) {
+  #navigation .cs-li:nth-of-type(2) {
     transition-delay: 0.1s;
   }
 
-  #cs-navigation .cs-li:nth-of-type(3) {
+  #navigation .cs-li:nth-of-type(3) {
     transition-delay: 0.15s;
   }
 
-  #cs-navigation .cs-li:nth-of-type(4) {
+  #navigation .cs-li:nth-of-type(4) {
     transition-delay: 0.2s;
   }
 
-  #cs-navigation .cs-li:nth-of-type(5) {
+  #navigation .cs-li:nth-of-type(5) {
     transition-delay: 0.25s;
   }
 
-  #cs-navigation .cs-li:nth-of-type(6) {
+  #navigation .cs-li:nth-of-type(6) {
     transition-delay: 0.3s;
   }
 
-  #cs-navigation .cs-li:nth-of-type(7) {
+  #navigation .cs-li:nth-of-type(7) {
     transition-delay: 0.35s;
   }
 
-  #cs-navigation .cs-li:nth-of-type(8) {
+  #navigation .cs-li:nth-of-type(8) {
     transition-delay: 0.4s;
   }
 
-  #cs-navigation .cs-li:nth-of-type(9) {
+  #navigation .cs-li:nth-of-type(9) {
     transition-delay: 0.45s;
   }
 
-  #cs-navigation .cs-li-link {
+  #navigation .cs-li-link {
     /* 16px - 24px */
     font-size: clamp(1rem, 3vw, 1.5rem);
     line-height: 1.2em;
@@ -502,7 +502,7 @@ html {
     position: relative;
   }
 
-  #cs-navigation .cs-li-link:before {
+  #navigation .cs-li-link:before {
     /* active state underline */
     content: "";
     width: 100%;
@@ -515,11 +515,11 @@ html {
     left: 0;
   }
 
-  #cs-navigation .cs-li-link.cs-active:before {
+  #navigation .cs-li-link.cs-active:before {
     display: block;
   }
 
-  #cs-navigation .cs-button-solid {
+  #navigation .cs-button-solid {
     display: none;
   }
 }
@@ -529,15 +529,15 @@ html {
   body.dark-mode .cs-logo {
     background-color: var(--medium);
   }
-  body.dark-mode #cs-navigation:before {
+  body.dark-mode #navigation:before {
     background-color: var(--medium);
   }
-  body.dark-mode #cs-navigation .cs-ul-wrapper,
-  body.dark-mode #cs-navigation {
+  body.dark-mode #navigation .cs-ul-wrapper,
+  body.dark-mode #navigation {
     background-color: var(--dark);
   }
 
-  body.dark-mode #cs-navigation .cs-ul-wrapper:before {
+  body.dark-mode #navigation .cs-ul-wrapper:before {
     /* backgorund overlay */
     content: "";
     width: 100%;
@@ -550,7 +550,7 @@ html {
     left: 0;
   }
 
-  body.dark-mode #cs-navigation .cs-li-link {
+  body.dark-mode #navigation .cs-li-link {
     color: var(--bodyTextColorWhite);
   }
 }
@@ -561,7 +561,7 @@ html {
 
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-  #cs-navigation {
+  #navigation {
     width: 100%;
     /* 23px - 420px */
     padding: 0rem 1rem 0rem clamp(14.6875rem, 23vw, 26.25rem);
@@ -576,11 +576,11 @@ html {
     z-index: 10000;
   }
 
-  #cs-navigation .cs-toggle {
+  #navigation .cs-toggle {
     display: none;
   }
 
-  #cs-navigation .cs-logo {
+  #navigation .cs-logo {
     width: 18.4%;
     max-width: 20rem;
     height: 100%;
@@ -598,14 +598,14 @@ html {
     padding-right: 8px;
   }
 
-  #cs-navigation .cs-logo img {
+  #navigation .cs-logo img {
     width: 100%;
     height: 100%;
     /* ensures the image never overflows the container. It stays contained within it's width and height and expands to fill it then stops once it reaches an edge */
     object-fit: contain;
   }
 
-  #cs-navigation .cs-ul {
+  #navigation .cs-ul {
     margin: 0;
     padding: 0;
     display: flex;
@@ -615,19 +615,19 @@ html {
     gap: clamp(1.25rem, 2.6vw, 2.25rem);
   }
 
-  #cs-navigation .cs-li {
+  #navigation .cs-li {
     list-style: none;
     padding: 2rem 0;
     /* prevent flexbox from squishing it */
     flex: none;
   }
 
-  #cs-navigation .cs-li:last-of-type {
+  #navigation .cs-li:last-of-type {
     /* pushes the button to the far roght */
     margin-left: auto;
   }
 
-  #cs-navigation .cs-li-link {
+  #navigation .cs-li-link {
     /* 14px - 16px */
     font-size: clamp(0.875rem, 1vw, 1rem);
     line-height: 1.5em;
@@ -638,15 +638,15 @@ html {
     position: relative;
   }
 
-  #cs-navigation .cs-li-link:hover:before {
+  #navigation .cs-li-link:hover:before {
     width: 100%;
   }
 
-  #cs-navigation .cs-li-link.cs-active:before {
+  #navigation .cs-li-link.cs-active:before {
     width: 100%;
   }
 
-  #cs-navigation .cs-li-link:before {
+  #navigation .cs-li-link:before {
     /* active state underline */
     content: "";
     width: 0%;
@@ -660,26 +660,26 @@ html {
     transition: width 0.3s;
   }
 
-  #cs-navigation .cs-nav-button {
+  #navigation .cs-nav-button {
     margin: 0 1rem 0 auto;
   }
 }
 
 /* Dark Mode */
 @media only screen and (min-width: 64rem) {
-  body.dark-mode #cs-navigation {
+  body.dark-mode #navigation {
     background-color: var(--dark);
   }
 
-  body.dark-mode #cs-navigation .cs-logo {
+  body.dark-mode #navigation .cs-logo {
     background-color: var(--medium);
   }
 
-  body.dark-mode #cs-navigation .cs-li-link {
+  body.dark-mode #navigation .cs-li-link {
     color: var(--bodyTextColorWhite);
   }
 
-  body.dark-mode #cs-navigation .cs-li-link:before {
+  body.dark-mode #navigation .cs-li-link:before {
     background-color: var(--primaryLight);
   }
 }
@@ -784,13 +784,13 @@ html {
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  #cs-footer-106 {
+  #footer {
     padding: (40/16rem) (16/16rem) (20/16rem);
     background: rgb(142, 167, 233);
     background: linear-gradient(
       360deg,
-      rgba(142, 167, 233, 1) 20%,
-      rgba(114, 134, 211, 1) 46%
+      rgba(142, 167, 233, 1) 12%,
+      rgba(114, 134, 211, 1) 60%
     );
 
     .cs-container {
@@ -881,7 +881,7 @@ html {
 
 /* Tablet - 700px */
 @media only screen and (min-width: 43.75rem) {
-  #cs-footer-106 {
+  #footer {
     .cs-ul {
       display: flex;
       /* push everything to the left */
@@ -905,7 +905,7 @@ html {
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode {
-    #cs-footer-106 {
+    #footer {
       background-color: #202020;
       background-image: none;
 
@@ -922,7 +922,7 @@ html {
 
 /* Mobile */
 @media only screen and (min-width: 0rem) {
-  #pricing-357 {
+  #pricing {
     padding: var(--sectionPadding);
     padding-top: 0;
     position: relative;
@@ -1176,7 +1176,7 @@ html {
 
 /* Tablet 768px */
 @media only screen and (min-width: 48rem) {
-  #pricing-357 {
+  #pricing {
     .cs-card-group {
       flex-direction: row;
       flex-wrap: wrap;
@@ -1211,7 +1211,7 @@ html {
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode {
-    #pricing-357 {
+    #pricing {
       background-color: var(--dark);
 
       .cs-wave {
