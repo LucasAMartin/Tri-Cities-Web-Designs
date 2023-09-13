@@ -1,7 +1,8 @@
 ---
-title: Why Should Small Business Have a Website?
-description: Why a professional website is an important aspect of establishing a
-  brand identity.
+title: Why Should a Small Business Have a Website?
+description: Discover why having a professional website is a crucial element in
+  shaping and solidifying your brand identity. Learn how a well-designed website
+  can convey your brand's values and personality to your audience effectively.
 author: Lucas Martin
 date: 2023-09-13T22:01:53.061Z
 tags:
