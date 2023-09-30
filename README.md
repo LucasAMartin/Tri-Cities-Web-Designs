@@ -33,6 +33,6 @@ This website is ready to be deployed on Netlify. Simply connect your repository 
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE] file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 Thank you for checking out Tri Cities Web Designs! If you have any questions or feedback, please open an issue on this GitHub repository.
